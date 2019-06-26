@@ -5,24 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+    function 
+    hover(x, y) {
+        document.getElementsByClassName(x)[0].style.display = "none";
+        document.getElementsByClassName(y)[0].style.display = "block";
+    }
+    </script>
     <title>Document</title>
 </head>
 <body>
     <div class="landing-page-container">
         <div class="landing-page">
-            <div class="name-design-container"><img class="name-design" src="./images/svg/landing-page-design.svg" alt="Mason Mathew"></div>
+            <div class="name-design-container">
+                <img class="name-design plain" src="./images/svg/plain-design.svg" alt="Mason Mathew">
+                <img class="name-design white" src="./images/svg/white-design.svg" alt="Mason Mathew">
+                <img class="name-design yellow" src="./images/svg/yellow-design.svg" alt="Mason Mathew">
+                <img class="name-design blue" src="./images/svg/blue-design.svg" alt="Mason Mathew">
+                <img class="name-design red" src="./images/svg/red-design.svg" alt="Mason Mathew">
+            </div>
             <div class="nav-grid-container">
                 <div class="nav-grid">
                     <div class="nav-row nav-row-top">
-                        <div class="grid-item">
-                            <!-- <img class="selection-rectangle" src="./images/svg/landing-page-selection.svg"> -->
-                            <img src="./images/svg/portfolio-button_label.svg" alt="portfolio-button">
+                        <div class="grid-item grid-item_portfolio" onmouseover='hover("plain", "white")' onmouseout='hover("white", "plain")'>
+                            <img class="grid-image" src="./images/svg/portfolio-button_label.svg" alt="portfolio-button">
                         </div>
-                        <div class="grid-item"><img src="./images/svg/code-button_label.svg" alt="code-button"></div>
+                        <div class="grid-item grid-item_code" onmouseover='hover("plain", "yellow")' onmouseout='hover("yellow", "plain")'>
+                            <img class="grid-image" src="./images/svg/code-button_label.svg" alt="code-button">
+                        </div>
                     </div>
                     <div class="nav-row nav-row-bottom">
-                        <div class="grid-item"><img src="./images/svg/writing-button_label.svg" alt="writing-button"></div>
-                        <div class="grid-item"><img src="./images/svg/about-button_label.svg" alt="about-button"></div>
+                        <div class="grid-item grid-item_writing" onmouseover='hover("plain", "blue")' onmouseout='hover("blue", "plain")'>
+                            <img class="grid-image" src="./images/svg/writing-button_label.svg" alt="writing-button">
+                        </div>
+                        <div class="grid-item grid-item_about" onmouseover='hover("plain", "red")' onmouseout='hover("red", "plain")'>
+                            <img class="grid-image" src="./images/svg/about-button_label.svg" alt="about-button">
+                        </div>
                     </div>
                 </div>
             </div>
