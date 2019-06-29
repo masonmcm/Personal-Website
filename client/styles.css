@@ -4,12 +4,49 @@
     box-sizing: border-box;
 }
 
-
 .white, .yellow, .blue, .red {
     display: none;
 }
 
+.name-design {
+    margin: 10px; 
+}
 
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio {  
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    padding: 10px 10px 20px 10px;
+}
+
+.nav-button, .name-button {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.nav-button {
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.name-button {
+    justify-content: flex-end;
+}
 
 
 /* Mobile Styles */
@@ -19,16 +56,33 @@
     .grid-item {
         margin: 12px;
     }
+
+         /* Portfolio Styles */
+
+         .nav-button-image {
+            width: 30%;
+            min-width: 100px;
+        }
+    
+        .name-button-image {
+            width: 40%;
+            min-width: 150px;
+        }
+    
+        .gallery {
+            padding-top: 50px; 
+        }
+    
+        .gallery-image {
+            width: 60%;
+            max-width: 350px;
+        }
+    
 }
   
   /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
-    
     /* Landing Page Styles */
-
-    /* .selection-rectangle {
-        display: none;
-    } */
 
     .landing-page-container {
         display: flex;
@@ -63,6 +117,28 @@
         margin: 20px;
         flex: 1;  
     }
+
+     /* Portfolio Styles */
+
+     .nav-button-image {
+        width: 30%;
+        min-width: 100px;
+    }
+
+    .name-button-image {
+        width: 40%;
+        min-width: 150px;
+    }
+
+    .gallery {
+        padding-top: 50px; 
+    }
+
+    .gallery-image {
+        width: 40%;
+        max-width: 350px;
+    }
+
   }
   
  /* Desktop Styles */
@@ -86,11 +162,15 @@
        padding-bottom: 100px;
     }
     
+    /* Shrinks */ 
     .nav-grid {
         flex: 1;
+        /* border: 1px solid red; */
     }
     
+    /* Stays */
     .nav-grid-container {
+        /* border: 1px solid red; */
         flex: 1;
         display: flex;
         align-items: center;
@@ -111,6 +191,7 @@
         flex: 1;
         max-width: 450px;
         margin-left: 15px;
+        /* border: 1px solid red; */
     }
 
     .name-design {
@@ -118,4 +199,29 @@
         flex: 1;
     }
 
+    /* Portfolio Styles */
+
+
+    .nav-button-image {
+        width: 30%;
+        max-width: 140px;
+    }
+
+    .name-button-image {
+        width: 35%;
+        min-height: 125px;
+    }
+
+    .gallery {
+        padding-top: 100px; 
+    }
+
+    .gallery-image {
+        width: 40%;
+        max-width: 350px;
+    }
+
+    /* .nav-button, .name-button {
+        border: 1px solid red;
+    } */
   }
