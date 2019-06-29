@@ -5,23 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="functions.js"></script>
     <title>Portfolio</title>
 </head>
 <body>
     <div class="portfolio-container">
         <div class="portfolio">
             <div class="header">
-            <div class="nav-button">
-                <img class="nav-button-image" src="./images/svg/portfolio_button.svg" alt="portfolio-button">
+            <div class="nav">
+                <img class="nav-button-image" src="./images/svg/portfolio_button.svg" alt="portfolio-button" onclick='navOnClick("nav-button-image", "name-button-image-black", "name-button-image-white", "black")'>
+                <div class="nav-bar">
+                        <img class="circular-nav-button" src="./images/svg/portfolio-nav-button_white.svg" onclick='navOffClick("name-button-image-white", "name-button-image-black", "nav-button-image", "white")'>
+                        <a href="portfolio.html"><img class="nav-button" src="./images/svg/portfolio-label_white.svg"></a>
+                        <img class="nav-button" src="./images/svg/code-label_white.svg">
+                        <img class="nav-button" src="./images/svg/writing-label_white.svg">
+                        <img class="nav-button" src="./images/svg/about-label_white.svg">
+                </div>
             </div>
-            <div class="name-button">
-                <a class="name-button" href="landing-page.html">
-                    <img class="name-button-image" src="./images/svg/mason_mathew_black.svg" alt="mason-mathew">
-                </a>
+            <a class="name-button" href="landing-page.html">
+                <img class="name-button-image name-button-image-black" src="./images/svg/mason-mathew-black.svg" alt="mason-mathew">
+                <img class="name-button-image name-button-image-white" src="./images/svg/mason-mathew-white.svg" alt="mason-mathew">
+            </a>
             </div>
-        </div>
-        <div class="gallery">
-            <img class="gallery-image" src="images/jpg/gallery-images-placeholder.png">
+        <div class="gallery-container" onclick='navOffClick("name-button-image-white", "name-button-image-black", "nav-button-image", "white")'>
+            <div class="gallery">
+                <div class="gallery-row">
+                    <img class="gallery-image" src="./images/jpg/thumb/kanye_thumb.jpg" alt="pixel-portrait-1">
+                    <img class="gallery-image" src="./images/jpg/thumb/kendall_thumb.jpg" alt="pixel-portrait-2">
+                </div>
+                <div class="gallery-row">
+                    <img class="gallery-image" src="./images/jpg/thumb/greer_thumb.jpg" alt="pixel-portrait-3">
+                    <img class="gallery-image" src="./images/jpg/thumb/greer-detail_thumb.jpg" alt="pixel-portrait-3-detail">
+                </div>
+                <div class="gallery-row">
+                    <img class="gallery-image" src="./images/jpg/thumb/sin-shirt_thumb.jpg" alt="sin-shirt">
+                    <img class="gallery-image" src="./images/jpg/thumb/wire-portrait_thumb.jpg" alt="wire-portrait">
+                </div>
+                <div class="gallery-row">
+                    <img class="gallery-image" src="./images/jpg/thumb/jean-shirt_thumb.jpg" alt="jean-shirt">
+                    <img class="gallery-image" src="./images/jpg/thumb/costume_thumb.jpg" alt="costume">
+                </div>
+                <div class="gallery-row">
+                    <img class="gallery-image" src="./images/jpg/thumb/reliquary_thumb.jpg" alt="reliquary">
+                    <img class="gallery-image" src="./images/jpg/thumb/lattice-1_thumb.jpg" alt="lattice-1">
+                </div>
+                <div class="gallery-row">
+                    <img class="gallery-image" src="./images/jpg/thumb/sketch-1_thumb.jpg" alt="sketch-1">
+                    <img class="gallery-image" src="./images/jpg/thumb/sketch-2_thumb.jpg" alt="sketch-2">
+                </div>
+            </div>  
         </div>
      </div>
     </div>  

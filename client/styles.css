@@ -16,37 +16,72 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .portfolio {  
     width: 100%;
 }
 
-.gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .header {
     display: flex;
     padding: 10px 10px 20px 10px;
+    align-items: flex-start;
+    /* background-color: black; */
 }
 
-.nav-button, .name-button {
+.nav, .name-button {
     display: flex;
     flex: 1;
     align-items: center;
 }
 
-.nav-button {
+.nav {
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: flex-start;
+    /* border: 1px solid black; */
 }
 
 .name-button {
     justify-content: flex-end;
 }
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+
+.gallery-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px; 
+}
+
+.gallery-image {
+    width: 40%;
+}
+
+.circular-nav-button {
+    width: 30%;
+}
+
+.nav-bar {
+    width: 30%;
+    max-width: 140px;
+    min-width: 110px;
+    padding-left: 10px;
+    /* border: 1px solid red; */
+}
+
+.name-button-image-white {
+    display: none;
+}
+
 
 
 /* Mobile Styles */
@@ -57,26 +92,26 @@
         margin: 12px;
     }
 
-         /* Portfolio Styles */
+    /* Portfolio Styles */
 
-         .nav-button-image {
-            width: 30%;
-            min-width: 100px;
-        }
+    .nav-button-image {
+        width: 30%;
+        min-width: 100px;
+    }
     
-        .name-button-image {
-            width: 40%;
-            min-width: 150px;
-        }
+    .name-button-image {
+        width: 40%;
+        min-width: 150px;
+    }
     
-        .gallery {
-            padding-top: 50px; 
-        }
+    .gallery-container {
+        padding-top: 50px; 
+    }
     
-        .gallery-image {
-            width: 60%;
-            max-width: 350px;
-        }
+    .gallery {
+        width: 30%;
+        min-width: 300px;
+    }
     
 }
   
@@ -130,21 +165,19 @@
         min-width: 150px;
     }
 
-    .gallery {
+    .gallery-container {
         padding-top: 50px; 
     }
 
-    .gallery-image {
+    .gallery {
         width: 40%;
-        max-width: 350px;
+        min-width: 338px;
     }
-
   }
   
  /* Desktop Styles */
  @media only screen and (min-width: 961px) {
-
-
+     
     /* Landing Page Styles */
 
     .landing-page-container {
@@ -162,15 +195,12 @@
        padding-bottom: 100px;
     }
     
-    /* Shrinks */ 
+
     .nav-grid {
         flex: 1;
-        /* border: 1px solid red; */
     }
     
-    /* Stays */
     .nav-grid-container {
-        /* border: 1px solid red; */
         flex: 1;
         display: flex;
         align-items: center;
@@ -212,16 +242,12 @@
         min-height: 125px;
     }
 
-    .gallery {
+    .gallery-container {
         padding-top: 100px; 
     }
 
-    .gallery-image {
+    .gallery {
         width: 40%;
-        max-width: 350px;
+        min-width: 350px;
     }
-
-    /* .nav-button, .name-button {
-        border: 1px solid red;
-    } */
   }
