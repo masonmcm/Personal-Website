@@ -1,0 +1,25 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A personal website and portfolio for and by Mason Mathew written in TypeScript and Angular. Backed by a content management system that utilizes Express.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel client/landing-page.html",
+    "build": "parcel build client/{*.css,functions.js}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masonmcm/Personal-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masonmcm/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/masonmcm/Personal-Website#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.5.2"
+  }
+}
