@@ -23,9 +23,11 @@
             </div>
             <div class="header">
             <div class="nav">
-                <img class="nav-button-image" src="./images/svg/portfolio_button.svg" alt="portfolio-button" onclick='navOnClick("nav-button-image", "name-button-image-black", "name-button-image-white", "black")'>
+                <img class="nav-button-image" src="./images/svg/portfolio_button.svg" alt="portfolio-button" onclick='navOnClick("nav-button-image", "name-button-image-black", "name-button-image-white", "black")'
+                onmouseover='navOnClick("nav-button-image", "name-button-image-black", "name-button-image-white", "black")'>
                 <div class="nav-bar">
-                        <img class="circular-nav-button" src="./images/svg/portfolio-nav-button_white.svg" onclick='navOffClick("name-button-image-white", "name-button-image-black", "nav-button-image", "white")'>
+                        <img class="circular-nav-button" src="./images/svg/portfolio-nav-button_white.svg" onmouseover='navOffClick("name-button-image-white", "name-button-image-black", "nav-button-image", "white")'
+                        onclick='navOffClick("name-button-image-white", "name-button-image-black", "nav-button-image", "white")'>
                         <a href="portfolio.html"><img class="nav-button" src="./images/svg/portfolio-label_white.svg"></a>
                         <img class="nav-button" src="./images/svg/code-label_white.svg">
                         <img class="nav-button" src="./images/svg/writing-label_white.svg">
@@ -37,7 +39,11 @@
                 <img class="name-button-image name-button-image-white" src="./images/svg/mason-mathew-white.svg" alt="mason-mathew">
             </a>
             </div>
-        <div class="gallery-container" onclick='navOffClick("name-button-image-white", "name-button-image-black", "nav-button-image", "white")'>
+        <div class="gallery-container" onclick='navOffClick("name-button-image-white", "name-button-image-black", "nav-button-image", "white")'
+        onmouseover='navOffClick("name-button-image-white", "name-button-image-black", "nav-button-image", "white")'>
+            <div class="pop-up-container">
+                <img class="pop-up-image" src="./images/jpg/full-size/kanye_full.jpg" alt="pixel-portrait-1-full">
+            </div>
             <div class="gallery">
                 <div class="gallery-row">
                     <img class="gallery-image" src="./images/jpg/thumb/kanye_thumb.jpg" alt="pixel-portrait-1">

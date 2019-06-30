@@ -16,4 +16,5 @@ function navOffClick(hide, show1, show2, color) {
     document.getElementsByClassName(show1)[0].style.display = "block";
     document.getElementsByClassName(show2)[0].style.display = "block";
     document.getElementsByClassName("header")[0].style.backgroundColor = color;
+    document.getElementsByClassName("header")[0].style.backgroundImage = "none";
 }
