@@ -96,6 +96,10 @@
     width: 100%;
 }
 
+.gallery {
+    display: grid;
+}
+
 .gallery-row {
     display: flex;
     justify-content: space-around;
@@ -103,7 +107,7 @@
 }
 
 .gallery-image {
-    width: 40%;
+    width: 49%;
 }
 
 .circular-nav-button {
