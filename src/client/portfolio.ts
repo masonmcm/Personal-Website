@@ -11,7 +11,7 @@ export let main = () => {
     circularNavButton.addEventListener("mouseover", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
     circularNavButton.addEventListener("click", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
 
-    const galleryContainer = document.getElementsByClassName("gallery-container")[0];
+    const galleryContainer = document.getElementById("gallery-container");
 
     galleryContainer.addEventListener("mouseover", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
     galleryContainer.addEventListener("click", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
