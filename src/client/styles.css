@@ -12,18 +12,22 @@
     margin: 10px; 
 }
 
-.portfolio-container {
+.portfolio-container, .about-container, .code-container, .writing-container {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.portfolio {  
+.container {
+    /* border: 1px solid red; */
+    min-height: 80vh;
+}
+
+.portfolio, .about, .code, .writing {  
     width: 100%;
 }
 
-.pop-up {
+/* .pop-up {
     top: 30px;
     bottom: 50px;
     position: fixed;
@@ -35,7 +39,7 @@
 
 .pop-up-wide {
     width: 70%;
-}
+} */
 
 .pop-up {
     pointer-events: none;
@@ -134,10 +138,6 @@
     display: none;
 }
 
-/* .gallery-container{
-    border: 1px solid red;
-} */
-
 
 
 /* Mobile Styles */
@@ -199,6 +199,37 @@
         width: 30%;
         min-width: 300px;
     }
+
+    .pop-up {
+        top: 0px;
+        bottom: 0px;
+        position: fixed;
+        /* width: 40%; */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        width: 100%;
+        background-color: black;
+    }
+
+    .pop-up-image {
+        max-height: 425px;
+    }
+    
+    .pop-up-wide {
+        width: 100%;
+    }
+
+    .back-button {
+        display: fixed;
+        width: 40%;
+        margin-left: 55%;
+        top: 50px;
+        border: 1px solid red;
+
+    }
     
 }
   
@@ -259,6 +290,25 @@
     .gallery {
         width: 40%;
         min-width: 338px;
+    }
+
+    .pop-up {
+        top: 30px;
+        bottom: 50px;
+        position: fixed;
+        width: 60%;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        min-width: 338px;
+    }
+    
+    .pop-up-wide {
+        width: 80%;
+    }
+
+    .back-button {
+        display: none;
     }
   }
   
@@ -336,5 +386,28 @@
     .gallery {
         width: 40%;
         min-width: 350px;
+    }
+
+    .pop-up {
+        top: 30px;
+        bottom: 50px;
+        position: fixed;
+        width: 40%;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        min-width: 338px;
+    }
+    
+    .pop-up-wide {
+        width: 80%;
+    }
+
+    .pop-up-narrow {
+        width: 30%;
+    }
+
+    .back-button {
+        display: none;
     }
   }

@@ -90,14 +90,16 @@ class PopUp extends React.Component<PopUpProps> {
                         <p>{this.props.display.medium}</p>
                         <p>{this.props.display.date}</p>
                     </div>
+                    <img className="back-button" src="./images/svg/back-button.svg" alt="back-button"></img>  
                </div>;
     }
 
     generatePopUpClass(): string {
         let popUpClass = (this.props.hidden) ? "pop-up-hidden" : "pop-up";
         if(this.props.display.size === "wide") {
-            console.log("wide");
             return popUpClass + " pop-up-wide"
+        } else if (this.props.display.size === "narrow"){
+            return popUpClass + " pop-up-narrow";
         } else {
             return popUpClass;
         }

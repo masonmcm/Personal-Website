@@ -1,5 +1,4 @@
-
-export let main = () => {
+let main = () => {
 
     const navButtonImage = document.getElementsByClassName("nav-button-image")[0];
 
@@ -11,10 +10,10 @@ export let main = () => {
     circularNavButton.addEventListener("mouseover", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
     circularNavButton.addEventListener("click", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
 
-    const galleryContainer = document.getElementById("gallery-container");
+    const container = document.getElementsByClassName("container")[0];
 
-    galleryContainer.addEventListener("mouseover", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
-    galleryContainer.addEventListener("click", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
+    container.addEventListener("mouseover", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
+    container.addEventListener("click", () => { navInteract("name-button-image-white", "name-button-image-black", "nav-button-image", "white", false)});
 
 };
 

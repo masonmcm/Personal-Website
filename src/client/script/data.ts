@@ -26,7 +26,7 @@ export default [
         "thumbSrc": "./images/jpg/thumb/greer_thumb.jpg",
         "src": "./images/jpg/full-size/greer_full.jpg",
         "title": "Pixel Portrait 4",
-        "collab": "none",
+        "collab": "Walker Bankson",
         "date": 2016,
         "medium": "Acrylic on canvas",
         "size": "regular"
@@ -95,7 +95,7 @@ export default [
         "collab": "Noah McGee",
         "date": 2016,
         "medium": "Acrylic and housepaint on canvas shirt",
-        "size": "regular"
+        "size": "narrow"
     },
 
     {
@@ -106,7 +106,7 @@ export default [
         "collab": "none",
         "date": 2017,
         "medium": "Gouache on paper",
-        "size": "regular"
+        "size": "narrow"
     },
 
     {
@@ -117,7 +117,7 @@ export default [
         "collab": "none",
         "date": 2017,
         "medium": "Gouache on paper",
-        "size": "regular"
+        "size": "narrow"
     },
 
     {
@@ -128,7 +128,7 @@ export default [
         "collab": "none",
         "date": 2017,
         "medium": "Gouache on paper",
-        "size": "regular"
+        "size": "narrow"
     },
 
     {
