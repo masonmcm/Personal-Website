@@ -27,6 +27,7 @@
   "dependencies": {
     "@types/react": "^16.8.22",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-scroll-parallax": "^2.1.2"
   }
 }
