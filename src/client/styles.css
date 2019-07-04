@@ -19,7 +19,6 @@
 }
 
 .container {
-    /* border: 1px solid red; */
     min-height: 80vh;
 }
 
@@ -249,6 +248,24 @@ h2 {
 }
 
 
+.writing-and-code-links {
+    /* border: 1px solid black; */
+    padding-top: 75px;
+    margin-bottom: 75px;
+}
+
+.writing-and-code-links h2 {
+    text-align: center;
+    margin-bottom: 75px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.writing-and-code-links em {
+    font-weight: 400;
+}
+
+
 /* Mobile Styles */
 @media only screen and (max-width: 415px) {  
     .nav-bar-mobile {
@@ -299,12 +316,12 @@ h2 {
         min-width: 100px;
     }
     
-    #gallery-container {
+    #gallery-container, .container {
         padding-top: 25px; 
         min-width: 240px;
     }
 
-    .gallery {
+    .gallery, .writing-and-code-links {
         width: 30%;
         min-width: 300px;
     }
@@ -392,11 +409,11 @@ h2 {
         min-width: 150px;
     }
 
-    #gallery-container {
+    #gallery-container, .container {
         padding-top: 50px; 
     }
 
-    .gallery {
+    .gallery, .writing-and-code-links {
         width: 40%;
         min-width: 338px;
     }
@@ -424,6 +441,11 @@ h2 {
         flex-direction: column;
         align-items: center;
     }
+
+
+    .writing-and-code-links h2 {
+        font-size: 1.2em;
+    }  
   }
   
  /* Desktop Styles */
@@ -493,11 +515,11 @@ h2 {
         min-height: 125px;
     }
 
-    #gallery-container {
+    #gallery-container, .container {
         padding-top: 100px; 
     }
 
-    .gallery {
+    .gallery, .writing-and-code-links {
         width: 40%;
         min-width: 350px;
     }
@@ -524,5 +546,10 @@ h2 {
 
     .back-button {
         display: none;
+    }
+
+
+    .writing-and-code-links h2 {
+        font-size: 1.5em;
     }
   }
