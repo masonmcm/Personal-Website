@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .white, .yellow, .blue, .red {
     display: none;
 }
@@ -26,10 +27,6 @@
     width: 100%;
 }
 
-.pop-up {
-    pointer-events: none;
-}
-
 .pop-up-caption {
     background-color: black;
     padding: 10px;
@@ -49,6 +46,10 @@
 
 .pop-up-hidden {
     display: none;
+}
+
+.pop-up {
+    pointer-events: none;
 }
 
 .pop-up-caption p {
@@ -124,7 +125,8 @@
 .container {
     padding-top: 100px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-container {
@@ -149,13 +151,6 @@
     font-style: normal;
 }
 
-.profile-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
 .container h1 {
     font-size: 3em;
     font-style: italic;
@@ -165,6 +160,10 @@
 
 h1.exclamation-2 {
     font-weight: 400;
+}
+
+h1.exclamation-3 {
+    font-weight: 100;
 }
 
 .container h2 {
@@ -249,7 +248,6 @@ h2 {
 
 
 .writing-and-code-links {
-    /* border: 1px solid black; */
     padding-top: 75px;
     margin-bottom: 75px;
 }
@@ -263,6 +261,14 @@ h2 {
 
 .writing-and-code-links em {
     font-weight: 400;
+}
+
+.about-links-container {
+    display: flex;
+}
+
+.pop-up-image-and-caption {
+    background-color: black;
 }
 
 
@@ -330,12 +336,10 @@ h2 {
         top: 0px;
         bottom: 0px;
         position: fixed;
-        /* width: 40%; */
         height: 100vh;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
-        align-items: center;
+        justify-content: space-between;
         width: 100%;
         background-color: black;
     }
@@ -348,13 +352,51 @@ h2 {
         width: 100%;
     }
 
-    .back-button {
-        display: fixed;
-        width: 40%;
-        margin-left: 55%;
-        top: 50px;
-        border: 1px solid red;
+    .writing-and-code-links h2 {
+        font-size: 1.2em;
+    }  
 
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exclamation-3 {
+        margin-bottom: 30px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+    .image-container-links {
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    .coursework {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-page-image {
+        margin-bottom: 15px;
+    }
+
+    .about-links-container {
+        justify-content: space-between;
+        margin-bottom: 75px;
+        padding: 10px;
+    }
+
+    .about-link {
+        min-width: 90px;
+    }
+
+    .about-links-container {
+        display: none;
     }
     
 }
@@ -419,21 +461,28 @@ h2 {
     }
 
     .pop-up {
-        top: 0px;
-        bottom: 50px;
+        top: 0;
         position: fixed;
-        width: 60%;
-        max-height: 80vh;
+        width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(images/svg/lattice.svg);
+        background-size: 3000px;
+    }
+
+    .pop-up-image-and-caption {
+        width: 40%;
         min-width: 338px;
     }
     
     .pop-up-wide {
-        width: 80%;
+        width: 70%;
     }
 
-    .back-button {
+    .back-button-container {
         display: none;
     }
 
@@ -442,10 +491,33 @@ h2 {
         align-items: center;
     }
 
+    .profile-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
+        text-align: center;
+    }
+
+    .exclamation-3 {
+        margin-bottom: 30px;
+    }
 
     .writing-and-code-links h2 {
         font-size: 1.2em;
     }  
+
+    .about-links-container {
+        justify-content: space-between;
+        margin-bottom: 75px;
+    }
+
+    .about-link {
+        min-width: 120px;
+    }
   }
   
  /* Desktop Styles */
@@ -525,31 +597,50 @@ h2 {
     }
 
     .pop-up {
-        top: 0px;
-        bottom: 50px;
-        /* right: 0px; */
+        top: 0;
         position: fixed;
-        width: 40%;
-        max-height: 80vh;
+        width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        min-width: 338px;
-    }
-    
-    .pop-up-wide {
-        width: 80%;
+        align-items: center;
+        justify-content: center;
+        background-image: url(images/svg/lattice.svg);
+        background-size: 3000px;
     }
 
-    .pop-up-narrow {
+    .pop-up-image-and-caption {
+        width: 40%;
+        min-width: 338px;
+    }
+
+    .pop-up-regular, .pop-up-narrow {
         width: 30%;
     }
 
-    .back-button {
+    .back-button-container {
         display: none;
     }
 
+    .profile {
+        width: 100%;
+        min-width: 200px;
+        margin-right: 15px; 
+        margin-bottom: 40px;
+    }
+
+    .profile-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
     .writing-and-code-links h2 {
         font-size: 1.5em;
+    }
+
+    .about-links-container {
+        justify-content: space-between;
+        margin-bottom: 75px;
     }
   }

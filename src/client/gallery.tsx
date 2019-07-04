@@ -83,32 +83,37 @@ class PopUp extends React.Component<PopUpProps> {
     }
 
     render() {
-        return <div className={this.generatePopUpClass()}>
+        return <div className={(this.props.hidden) ? "pop-up-hidden" : "pop-up"}>
+                    <div className={this.generatePopUpSize()}>
                     <img className="pop-up-image" src={this.props.display.src} alt="image"></img>
                     <div className="pop-up-caption">
                         <p><em>{this.props.display.title}</em>{(this.props.display.collab === "none") ? "" : ` (Collab with ${this.props.display.collab})`}</p>
                         <p>{this.props.display.medium}</p>
-                        <p>{this.props.display.date}</p>
+                          <p>{this.props.display.date}</p>
                     </div>
-                    <img className="back-button" src="./images/svg/back-button.svg" alt="back-button"></img>  
+                    </div>
                </div>;
     }
 
-    generatePopUpClass(): string {
-        let popUpClass = (this.props.hidden) ? "pop-up-hidden" : "pop-up";
+    generatePopUpSize(): string {
+        let returned = "pop-up-image-and-caption "
         if(this.props.display.size === "wide") {
-            return popUpClass + " pop-up-wide"
+            return returned + "pop-up-wide"
         } else if (this.props.display.size === "narrow"){
-            return popUpClass + " pop-up-narrow";
+            return returned + "pop-up-narrow";
         } else {
-            return popUpClass;
+            return returned + "pop-up-regular";
         }
+    }
+
+    hidePopUp(): void {
+        
     }
 }
 
 class Thumbnail extends React.Component<ThumbnailProps> {
     render() {
-        return <img className="gallery-image" onMouseEnter={() => this.handleMouseEvent(true)} onMouseLeave={() => this.handleMouseEvent(false)} src={this.props.display.thumbSrc} alt={this.props.display.title}></img>;
+        return <img className="gallery-image" onMouseDown={() => this.handleMouseEvent(true)} onMouseLeave={() => this.handleMouseEvent(false)} src={this.props.display.thumbSrc} alt={this.props.display.title}></img>;
     }
 
     handleMouseEvent(showPopUp: boolean) {
