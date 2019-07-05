@@ -5,6 +5,7 @@
 }
 
 
+
 .white, .yellow, .blue, .red {
     display: none;
 }
@@ -233,7 +234,6 @@ h2 {
 }
 
 .image-caption {
-    border: 1px solid black;
     margin: 0px 20px 0px 20px; 
     padding: 5px;
 }
@@ -270,6 +270,17 @@ h2 {
 .pop-up-image-and-caption {
     background-color: black;
 }
+
+/* .form-container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .gallery-image {
+    border: 1px solid red;
+} */
+
 
 
 /* Mobile Styles */
@@ -327,7 +338,7 @@ h2 {
         min-width: 240px;
     }
 
-    .gallery, .writing-and-code-links {
+    .gallery, .form-container, .writing-and-code-links {
         width: 30%;
         min-width: 300px;
     }
@@ -398,6 +409,15 @@ h2 {
     .about-links-container {
         display: none;
     }
+
+    .table {
+        display: none;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        font-size: 1.2em;
+    }
     
 }
   
@@ -455,7 +475,7 @@ h2 {
         padding-top: 50px; 
     }
 
-    .gallery, .writing-and-code-links {
+    .gallery, .form-container, .writing-and-code-links {
         width: 40%;
         min-width: 338px;
     }
@@ -517,6 +537,15 @@ h2 {
 
     .about-link {
         min-width: 120px;
+    }
+
+    .table {
+        display: none;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        font-size: 1.5em;
     }
   }
   
@@ -642,5 +671,33 @@ h2 {
     .about-links-container {
         justify-content: space-between;
         margin-bottom: 75px;
+    }
+
+    .table {
+        display: table;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    ul#gallery-selector {
+        list-style: none;
+    }
+    
+    ul#gallery-selector li, .gallery-link {
+        display: inline;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .form-container h2 {
+        display: none;
+    }
+
+    .gallery-page-break {
+        margin: 100px 0px 100px 0px;
     }
   }
