@@ -18,12 +18,16 @@ let main = () => {
 
     for(let i = 0; i < forms.length; i++) {
         if(formsRecord[forms[i]] === true){
-            this.document.getElementById(forms[i]).style.fontWeight = "bold";
-            this.document.getElementById(forms[i]).style.fontStyle = "italic";
+            this.document.getElementById(forms[i]).className += " show-form";
+            this.document.getElementById(forms[i]).classList.remove("hide-form");
+            // this.document.getElementById(forms[i]).style.fontWeight = "bold";
+            // this.document.getElementById(forms[i]).style.fontStyle = "italic";
         }
         if(formsRecord[forms[i]] === false){
-            this.document.getElementById(forms[i]).style.fontWeight = "200";
-            this.document.getElementById(forms[i]).style.fontStyle = "normal";
+            this.document.getElementById(forms[i]).className += " hide-form"
+            this.document.getElementById(forms[i]).classList.remove("show-form");
+            // this.document.getElementById(forms[i]).style.fontWeight = "200";
+            // this.document.getElementById(forms[i]).style.fontStyle = "normal";
         }
     }
     });

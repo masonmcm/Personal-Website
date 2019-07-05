@@ -281,6 +281,12 @@ h2 {
     border: 1px solid red;
 } */
 
+.show-form {
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 
 
 /* Mobile Styles */
@@ -410,14 +416,18 @@ h2 {
         display: none;
     }
 
-    .table {
+    /* .table {
         display: none;
-    }
+    } */
 
     .form-container h2 {
         text-align: center;
         font-size: 1.2em;
     }
+
+    .hide-form {
+        display: none;
+     }
     
 }
   
@@ -539,13 +549,43 @@ h2 {
         min-width: 120px;
     }
 
-    .table {
-        display: none;
-    }
-
     .form-container h2 {
         text-align: center;
         font-size: 1.5em;
+    }
+
+    .table {
+        display: table;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    ul#gallery-selector {
+        list-style: none;
+    }
+    
+    ul#gallery-selector .gallery-link {
+        display: inline;
+    }
+
+    ul li {
+        text-align: right;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .form-container h2 {
+        display: none;
+    }
+
+    .hide-form {
+        font-weight: 200;
+        font-style: none;
     }
   }
   
@@ -699,5 +739,10 @@ h2 {
 
     .gallery-page-break {
         margin: 100px 0px 100px 0px;
+    }
+
+    .hide-form {
+        font-weight: 200;
+        font-style: none;
     }
   }
