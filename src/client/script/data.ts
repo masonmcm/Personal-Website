@@ -151,22 +151,10 @@ export default [
         "collab": "none",
         "date": 2017,
         "medium": "Gouache on paper",
-        "form": "Photography",
+        "form": "2D",
         "size": "narrow"
     },
 
-    {
-        "id": 12,
-        "thumbSrc": "./images/jpg/thumb/wire-portrait_thumb.jpg",
-        "src": "./images/jpg/full-size/wire-portrait_full.jpg",
-        "title": "Self Portrait for 3D-Design",
-        "relativeUrl": "Self-Portrait-for-3D-Design",
-        "collab": "none",
-        "date": 2016,
-        "medium": "Metal wire and paper",
-        "form": "3D",
-        "size": "regular"
-    },
 
 
 ]

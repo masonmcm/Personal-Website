@@ -5,29 +5,27 @@ import ReactDOM from "react-dom";
 
 // 2. Import our Data
 import data from "./script/data"
-import { string } from "prop-types";
+
+import MediaQuery from 'react-responsive';
+import Fade from 'react-reveal/Fade'
 
 let main = () => {
 
     window.addEventListener("scroll", function() {
 
     forms.forEach((form) => { 
-        formsRecord[form] = ((window.scrollY > document.getElementById(form + "-container").offsetTop - 150) &&
-        (window.scrollY < document.getElementById(form + "-container").offsetTop + document.getElementById(form + "-container").offsetHeight - 150) ? true : false);
+        formsRecord[form] = ((window.scrollY > document.getElementById(form + "-container").offsetTop - 250) &&
+        (window.scrollY < document.getElementById(form + "-container").offsetTop + document.getElementById(form + "-container").offsetHeight - 250) ? true : false);
     });
 
     for(let i = 0; i < forms.length; i++) {
         if(formsRecord[forms[i]] === true){
             this.document.getElementById(forms[i]).className += " show-form";
             this.document.getElementById(forms[i]).classList.remove("hide-form");
-            // this.document.getElementById(forms[i]).style.fontWeight = "bold";
-            // this.document.getElementById(forms[i]).style.fontStyle = "italic";
         }
         if(formsRecord[forms[i]] === false){
             this.document.getElementById(forms[i]).className += " hide-form"
             this.document.getElementById(forms[i]).classList.remove("show-form");
-            // this.document.getElementById(forms[i]).style.fontWeight = "200";
-            // this.document.getElementById(forms[i]).style.fontStyle = "normal";
         }
     }
     });
@@ -64,6 +62,11 @@ type PopUpProps = {
     hidden: boolean;
 }
 
+type PopUpState = {
+    hidden: boolean
+}
+
+
 type GalleryProps = {
     displays: Display[]
 }
@@ -93,11 +96,10 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
     }
 
     render() {
-        return <div className="gallery-pop-up-container">
+        return <Fade bottom><div className="gallery-pop-up-container">
         <PopUp hidden={!this.state.showPopUp} display={this.state.selected}/>
-        <div className="gallery">{
-            this.generateGallery(this.state.forms)
-            }</div>
+        <div className="gallery">
+        {this.generateGalleryMediaQuery(this.state.forms)}</div>
         <div className="table-container">
             <div className="table">
             <ul id="gallery-selector">
@@ -109,7 +111,8 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
             </ul>
             </div>
         </div>
-        </div>;
+        </div>
+        </Fade>;
     }
 
     selectedHandler(display: Display, showPopUp: boolean): void {
@@ -129,30 +132,39 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
         document.getElementById(id).style.fontStyle = "normal";
     }
 
-    generateGallery(forms: string[]): JSX.Element[] {
+    generateGalleryMediaQuery(forms: string[]): JSX.Element[] {
         let elements = [];
         for(let i = 0; i < forms.length; i++){
-            elements.push(<div id={forms[i] + "-container"} key={forms[i] + "-container"} className="form-container">
-            <h2>{forms[i]}</h2>
-            {this.props.displays.filter((display) => {return display.form === forms[i]}).map((display) => {
-                return <Thumbnail id={display.relativeUrl} key={display.src} display={display}
-                    selected= {(display === this.state.selected) ? true : false }
-                        onSelect= {(display, showPopUp) => this.selectedHandler(display, showPopUp)}/>})}
-                            <img className="page-break gallery-page-break" src="images/svg/page-break.svg"></img></div>
-                        );
-                    
-        }
+        elements.push(<MediaQuery minWidth={961} key={forms[i] + " desktop"}>
+            <div id={forms[i] + "-container"} key={forms[i] + "-container"} className="form-container">
+                {this.generateGallery(forms[i])}
+            </div> 
+            <img className="page-break gallery-page-break" src="images/svg/page-break.svg"></img></MediaQuery>);
+        elements.push(<MediaQuery maxWidth={960} key={forms[i] + " mobile"}>{this.generateGallery(forms[i])}</MediaQuery>);
+        }                
         return elements;
+    }
+
+    generateGallery(form: string): JSX.Element[] {
+        return this.props.displays.filter((display) => {return display.form === form}).map((display) => {
+            return <Thumbnail id={display.relativeUrl} key={display.src} display={display}
+                selected= {(display === this.state.selected) ? true : false }
+                    onSelect= {(display, showPopUp) => this.selectedHandler(display, showPopUp)}/>});
     }
 }
 
-class PopUp extends React.Component<PopUpProps> {
+class PopUp extends React.Component<PopUpProps, PopUpState> {
     constructor(props) {
         super(props);
+
+        this.state = {
+            hidden: this.props.hidden
+        };
     }
 
     render() {
-        return <div className={(this.props.hidden) ? "pop-up-hidden" : "pop-up"}>
+        return <Fade right when={!this.props.hidden}>
+            <div className={(this.props.hidden) ? "pop-up-hidden" : "pop-up"}>
                     <div className={this.generatePopUpSize()}>
                     <img className="pop-up-image" src={this.props.display.src} alt="image"></img>
                     <div className="pop-up-caption">
@@ -161,7 +173,9 @@ class PopUp extends React.Component<PopUpProps> {
                           <p>{this.props.display.date}</p>
                     </div>
                     </div>
-               </div>;
+
+               </div>
+               </Fade>;
     }
 
     generatePopUpSize(): string {

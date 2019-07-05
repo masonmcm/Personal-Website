@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-
-
+.pop-up {
+    z-index: 1;
+}
 .white, .yellow, .blue, .red {
     display: none;
 }
@@ -69,7 +70,7 @@
     font-style: italic;
 }
 
-.header {
+#header {
     display: flex;
     padding: 10px 30px 30px 30px;
     align-items: center;
@@ -281,6 +282,11 @@ h2 {
     border: 1px solid red;
 } */
 
+
+.exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
+    text-align: center;
+}
+
 .show-form {
     font-weight: bold;
     font-style: italic;
@@ -306,7 +312,7 @@ h2 {
         display: none;
     }
 
-    .header {
+    #header {
         display: flex;
         justify-content: center;
     }
@@ -416,18 +422,15 @@ h2 {
         display: none;
     }
 
-    /* .table {
-        display: none;
-    } */
 
     .form-container h2 {
-        text-align: center;
+        text-align: right;
         font-size: 1.2em;
     }
 
-    .hide-form {
+    .table {
         display: none;
-     }
+    }
     
 }
   
@@ -528,10 +531,6 @@ h2 {
         align-items: center;
     }
 
-    .exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
-        text-align: center;
-    }
-
     .exclamation-3 {
         margin-bottom: 30px;
     }
@@ -550,42 +549,12 @@ h2 {
     }
 
     .form-container h2 {
-        text-align: center;
+        text-align: right;
         font-size: 1.5em;
     }
 
     .table {
-        display: table;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    ul#gallery-selector {
-        list-style: none;
-    }
-    
-    ul#gallery-selector .gallery-link {
-        display: inline;
-    }
-
-    ul li {
-        text-align: right;
-    }
-    
-    
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    .form-container h2 {
         display: none;
-    }
-
-    .hide-form {
-        font-weight: 200;
-        font-style: none;
     }
   }
   
@@ -711,6 +680,10 @@ h2 {
     .about-links-container {
         justify-content: space-between;
         margin-bottom: 75px;
+    }
+
+    .exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
+        text-align: left;
     }
 
     .table {

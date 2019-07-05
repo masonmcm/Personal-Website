@@ -1,9 +1,11 @@
+const header = document.getElementById("header") as HTMLElement;
+
 let main = () => {
 
     const navButtonImage = document.getElementsByClassName("nav-button-image")[0];
 
     navButtonImage.addEventListener("mouseover", () => { navInteract("nav-button-image", "name-button-image-black", "name-button-image-white", "black", true)});
-    navButtonImage.addEventListener("click", () => { navInteract("nav-button-image", "name-button-image-black", "name-button-image-white", "black", true)});
+    navButtonImage.addEventListener("touchstart", () => { navInteract("nav-button-image", "name-button-image-black", "name-button-image-white", "black", true)});
 
     const circularNavButton = document.getElementsByClassName("circular-nav-button")[0];
 
@@ -34,7 +36,6 @@ let navInteract = (item1: string, item2: string, item3: string, color: string, o
     const element1 = document.getElementsByClassName(item1)[0] as HTMLElement;
     const element2 = document.getElementsByClassName(item2)[0] as HTMLElement;
     const element3 = document.getElementsByClassName(item3)[0] as HTMLElement;
-    const header = document.getElementsByClassName("header")[0] as HTMLElement;
 
     element1.style.display = display1;
     element2.style.display = display2;
@@ -45,3 +46,9 @@ let navInteract = (item1: string, item2: string, item3: string, color: string, o
 
 
 window.addEventListener("load", main);
+
+window.onload = function () {
+    if(window.location.href.includes("visible")) {
+        navInteract("nav-button-image", "name-button-image-black", "name-button-image-white", "black", true);
+    }
+};
