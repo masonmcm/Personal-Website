@@ -56,6 +56,20 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.gallery-image {
+    width: 90%;
+}
+
+.even {
+    justify-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.odd {
+    justify-self: flex-end;
+    margin: 0px 10px 10px 0px;
+}
+
 .hidden {
     visibility: hidden;
 }
@@ -111,12 +125,6 @@
 
 .circular-nav-button {
     width: 30%;
-}
-
-.gallery-image {
-    width: 90%;
-    margin: 10px 0px 0px 10px;
-
 }
 
 .nav-bar {
@@ -536,9 +544,9 @@ h2 {
         padding-top: 50px; 
     }
 
-    .gallery, .form-container, .writing-and-code-links {
-        width: 40%;
-        min-width: 338px;
+    .gallery, .writing-and-code-links {
+        width: 50%;
+        min-width: 350px;
     }
 
     .pop-up {
@@ -677,7 +685,7 @@ h2 {
     }
 
     .gallery, .writing-and-code-links {
-        width: 40%;
+        width: 50%;
         min-width: 350px;
     }
 
