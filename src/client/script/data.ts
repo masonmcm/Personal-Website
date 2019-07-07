@@ -151,7 +151,7 @@ export default [
         "collab": "none",
         "date": 2017,
         "medium": "Gouache on paper",
-        "form": "2D",
+        "form": "Photography",
         "size": "narrow"
     },
 

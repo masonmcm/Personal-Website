@@ -50,9 +50,20 @@
     display: none;
 }
 
-.pop-up {
-    pointer-events: none;
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+.hidden {
+    visibility: hidden;
+}
+
+.form-container {
+    visibility: hidden;
+}
+
 
 .pop-up-caption p {
     color: white;
@@ -103,9 +114,9 @@
 }
 
 .gallery-image {
-    width: 47%;
-    margin-bottom: 5px;
-    margin-left: 7px;
+    width: 90%;
+    margin: 10px 0px 0px 10px;
+
 }
 
 .nav-bar {
@@ -268,9 +279,9 @@ h2 {
     display: flex;
 }
 
-.pop-up-image-and-caption {
+/* .pop-up-image-and-caption {
     background-color: black;
-}
+} */
 
 /* .form-container {
     border: 1px solid red;
@@ -292,7 +303,44 @@ h2 {
     font-style: italic;
 }
 
+.pop-up-image-and-caption {
+    width: 40%;
+    min-width: 338px;
+}
 
+.pop-up-body {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    width: 30%;
+}
+
+#arrow-left {
+    transform: rotate(180deg);
+}
+
+#exit-button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit-button {
+    width: 15%;
+}
+
+.background-black {
+    background-color: black;
+}
 
 
 /* Mobile Styles */
@@ -502,13 +550,12 @@ h2 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-image: url(images/svg/lattice.svg);
-        background-size: 3000px;
+        background-image: url(images/svg/lattice-background-3.svg);
     }
 
-    .pop-up-image-and-caption {
-        width: 40%;
-        min-width: 338px;
+    .pop-up-body {
+        display: flex;
+        justify-content: space-between;
     }
     
     .pop-up-wide {
@@ -642,9 +689,9 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        background-image: url(images/svg/lattice.svg);
-        background-size: 3000px;
+        justify-content: center;        
+        background-image: url(images/svg/lattice-background-3.svg);
+        /* background-size: 3000px; */
     }
 
     .pop-up-image-and-caption {
@@ -708,6 +755,10 @@ h2 {
 
     .form-container h2 {
         display: none;
+    }
+
+    .form-container {
+        margin-bottom: 50px;
     }
 
     .gallery-page-break {
