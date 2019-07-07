@@ -10,7 +10,6 @@ import MediaQuery from 'react-responsive';
 import Fade from 'react-reveal/Fade'
 
 let main = () => {
-
     window.addEventListener("scroll", function() {
 
     forms.forEach((form) => { 
@@ -51,6 +50,8 @@ const forms = ["2D", "3D", "Photography"];
 let formsRecord: Record<string, boolean> = {};
 let gallery: JSX.Element[] = [];
 let index: number = 0;
+let delay: number = 0;
+let showPopUp: boolean = true;
 
 for(let i = 0; i < forms.length; i++) {
     formsRecord[forms[i]] = false;
@@ -112,25 +113,24 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
     }
 
     render() {
-        return <Fade bottom><div className="gallery-pop-up-container">
-        <PopUp hidden={!this.state.showPopUp} display={this.state.selected} hide={() => this.setState({showPopUp: false})}
+        return <div className="gallery-pop-up-container">
+       <PopUp hidden={!this.state.showPopUp} display={this.state.selected} hide={() => this.setState({showPopUp: false})}
                 showNewImage={(display, direction) => this.showNewImage(display, direction)}/>
         <div className="gallery">
             {this.generateGalleryMediaQuery(this.state.forms)}  
         <div className="table-container">
             <div className="table">
-            <ul id="gallery-selector">
+            <Fade bottom delay={500}><ul id="gallery-selector">
                 {forms.map((form) => {
                     return <li key={form}><a href={"portfolio.html#" + form + "-container"}><p className="gallery-link" id={form} 
                     onMouseOver={() => this.handleMouseEvent(form, "bold", "italic")} onMouseLeave={() => this.handleMouseEvent(form, "200", "normal")}>{form}</p></a>
                     {(form === forms[forms.length - 1]) ? "" : " /"}</li>
                 })}
-            </ul>
+            </ul></Fade>
             </div>
         </div>
         </div>
-        </div>
-        </Fade>;
+        </div>;
     }
 
     showNewImage(display: Display, direction: string): void {
@@ -166,15 +166,7 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
 
             let formGallery = this.generateGallery(forms[i]);
 
-            elements.push(<MediaQuery minWidth={961} key={forms[i] + " desktop"}>
-                
-                    {formGallery}
-                {/* <div id={forms[i] + "-container"} key={forms[i] + "-container"} className="form-container"></div>  */}
-                </MediaQuery>);
-
-            elements.push(<MediaQuery maxWidth={960} key={forms[i] + " mobile"}>
-                {formGallery}
-            </MediaQuery>);
+           elements.push(formGallery);
 
         }        
         return elements;
@@ -210,8 +202,7 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
     }
 
     render() {
-        return <Fade right when={!this.props.hidden}>
-            <div className={(this.props.hidden) ? "pop-up-hidden" : "pop-up"}>
+        return <Fade left when={!this.props.hidden} delay={500}><div className={(this.props.hidden) ? "pop-up-hidden" : "pop-up"}>
                     <div className="pop-up-body">
                         <div className="arrow-container"><img className={"arrow" + ((this.props.display.id === gallery[0].props.display.id)? " hidden" : "")} id="arrow-left" src="images/svg/gallery-arrow-2.svg" 
                         onMouseDown={() => this.showNewImage(this.props.display, "left")}></img></div>
@@ -253,6 +244,7 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
 
     hide() {
         if(this.props.hide !== undefined){
+        showPopUp = true;
         this.props.hide();
         }
     }
@@ -260,8 +252,8 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
 
 class Thumbnail extends React.Component<ThumbnailProps> {
     render() {
-        return <img id={this.props.id} className={"gallery-image " + this.props.display.form + "-thumbnail" + ((this.props.index % 2 === 0)? " even" : " odd")} 
-        onMouseDown={() => this.handleMouseEvent(true)} src={this.props.display.thumbSrc} alt={this.props.display.title}></img>;
+        return <Fade bottom delay={this.delay()}><img id={this.props.id} className={"gallery-image " + this.props.display.form + "-thumbnail" + ((this.props.index % 2 === 0)? " even" : " odd")} 
+        onMouseDown={() => this.handleMouseEvent(true)} src={this.props.display.thumbSrc} alt={this.props.display.title}></img></Fade>;
     }
 
     handleMouseEvent(showPopUp: boolean) {
@@ -269,6 +261,12 @@ class Thumbnail extends React.Component<ThumbnailProps> {
             this.props.onSelect(this.props.display, showPopUp);
         }
     }
+
+    delay(): number {
+        delay += 200;
+        return delay;
+    }
 }
 
 window.addEventListener("load", main);
+window.addEventListener("load", () => {delay = 0});
