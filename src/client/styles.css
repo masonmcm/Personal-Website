@@ -5,8 +5,46 @@
 }
 
 .pop-up {
-    z-index: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/svg/lattice-background-3.svg);
 }
+
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.fade-exit-done {
+    opacity: 0;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms linear;
+}
+
+.fade-enter-done {
+    opacity: 1;
+}
+
+
 .white, .yellow, .blue, .red {
     display: none;
 }
@@ -44,9 +82,9 @@
 }
 
 .pop-up-hidden {
+    border: 1px solid red;
     display: none;
 }
-
 
 .gallery {
     display: grid;
@@ -284,19 +322,7 @@ h2 {
     display: flex;
 }
 
-/* .pop-up-image-and-caption {
-    background-color: black;
-} */
 
-/* .form-container {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .gallery-image {
-    border: 1px solid red;
-} */
 
 
 .exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
@@ -546,17 +572,6 @@ h2 {
         min-width: 350px;
     }
 
-    .pop-up {
-        top: 0;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-image: url(images/svg/lattice-background-3.svg);
-    }
 
     .pop-up-body {
         display: flex;
@@ -684,19 +699,6 @@ h2 {
     .gallery, .writing-and-code-links {
         width: 50%;
         min-width: 350px;
-    }
-
-    .pop-up {
-        top: 0;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;        
-        background-image: url(images/svg/lattice-background-3.svg);
-        /* background-size: 3000px; */
     }
 
     .pop-up-image-and-caption {

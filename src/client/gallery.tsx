@@ -5,9 +5,9 @@ import ReactDOM from "react-dom";
 
 // 2. Import our Data
 import data from "./script/data"
-
-import MediaQuery from 'react-responsive';
 import Fade from 'react-reveal/Fade'
+import { CSSTransition } from 'react-transition-group';
+import './styles.css';
 
 let main = () => {
     window.addEventListener("scroll", function() {
@@ -51,7 +51,6 @@ let formsRecord: Record<string, boolean> = {};
 let gallery: JSX.Element[] = [];
 let index: number = 0;
 let delay: number = 0;
-let showPopUp: boolean = true;
 
 for(let i = 0; i < forms.length; i++) {
     formsRecord[forms[i]] = false;
@@ -110,12 +109,11 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
             showPopUp: false,
             forms: forms
         };
+        
     }
 
     render() {
         return <div className="gallery-pop-up-container">
-       <PopUp hidden={!this.state.showPopUp} display={this.state.selected} hide={() => this.setState({showPopUp: false})}
-                showNewImage={(display, direction) => this.showNewImage(display, direction)}/>
         <div className="gallery">
             {this.generateGalleryMediaQuery(this.state.forms)}  
         <div className="table-container">
@@ -130,6 +128,16 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
             </div>
         </div>
         </div>
+        <CSSTransition
+            in={this.state.showPopUp}
+            appear={true}
+            timeout={400}
+            classNames="fade"
+            unmountOnExit
+            >
+        <PopUp hidden={!this.state.showPopUp} display={this.state.selected} hide={() => this.setState({showPopUp: false})}
+                showNewImage={(display, direction) => this.showNewImage(display, direction)}/>
+        </CSSTransition>
         </div>;
     }
 
@@ -202,7 +210,7 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
     }
 
     render() {
-        return <Fade left when={!this.props.hidden} delay={500}><div className={(this.props.hidden) ? "pop-up-hidden" : "pop-up"}>
+        return <div className="pop-up">
                     <div className="pop-up-body">
                         <div className="arrow-container"><img className={"arrow" + ((this.props.display.id === gallery[0].props.display.id)? " hidden" : "")} id="arrow-left" src="images/svg/gallery-arrow-2.svg" 
                         onMouseDown={() => this.showNewImage(this.props.display, "left")}></img></div>
@@ -219,8 +227,7 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
                         </div>
                         <div className="arrow-container"><img className={"arrow" + ((this.props.display.id === gallery[gallery.length - 1].props.display.id)? " hidden" : "")} id="arrow-right" src="images/svg/gallery-arrow-2.svg" onMouseDown={() => this.showNewImage(this.props.display, "right")}></img></div>
                     </div>
-               </div>
-               </Fade>;
+               </div>;
     }
 
     generatePopUpSize(): string {
@@ -244,7 +251,6 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
 
     hide() {
         if(this.props.hide !== undefined){
-        showPopUp = true;
         this.props.hide();
         }
     }
