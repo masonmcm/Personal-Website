@@ -26,11 +26,10 @@ class Header extends React.Component<HeaderProps, HeaderState>{
     }
     
     render() {
-    return <div id="header" className="header" onMouseLeave={() => this.setState({navHidden: true})}>
-        <div className="nav-flex">
+    return <Fade top delay={100}><div id="header" className="header" onMouseLeave={() => this.setState({navHidden: true})}>
         <div className="nav">
-            <Fade left when={this.state.navHidden}><img className="nav-button-image" src="images/svg/portfolio-button.svg" alt="about-button" onMouseEnter={() => this.setState({navHidden: false})}></img></Fade>
-                <Fade left when={!this.state.navHidden}><div className="nav-bar">
+        <Fade left when={this.state.navHidden}><img className="nav-button-image" src={this.generateURL()} alt="about-button"></img></Fade>
+                <Fade left when={!this.state.navHidden}><div className="nav-bar" onMouseEnter={() => this.setState({navHidden: false})}>
                     <img className="circular-nav-button" src="./images/svg/circular-nav-button_black.svg"></img>
                     <a href="portfolio?header=visible"><img className="nav-button" src="./images/svg/portfolio-label_black_slant.svg"></img></a>
                     <a href="code?header=visible"><img className="nav-button" src="./images/svg/code-label_black_slant.svg"></img></a>
@@ -38,12 +37,24 @@ class Header extends React.Component<HeaderProps, HeaderState>{
                     <a href="about?header=visible"><img className="nav-button" src="./images/svg/about-label_black_slant.svg"></img></a>
             </div></Fade>
     </div>
-    </div>
-    <a className="name-button" href="/">
+   <a className="name-button" href="/">
         <img className="name-button-image name-button-image-black" src="./images/svg/mason-mathew-black.svg" alt="mason-mathew"></img>
     </a>
-    </div>}
+    </div></Fade>}
+
+    generateURL(): string {
+        let windowURL = window.location.href;
+        if(windowURL.includes("portfolio")){
+            return "./images/svg/portfolio-button.svg";
+        } else if(windowURL.includes("writing")) {
+            return "./images/svg/writing-button.svg";
+        } else if(windowURL.includes("about")) {
+            return "./images/svg/about-button.svg";
+        } else {
+            return "./images/svg/code-button.svg";
+        }
+    }
 }
 
 
-window.addEventListener("load", main);
+window.addEventListener("load", main)

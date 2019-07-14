@@ -262,7 +262,7 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
 
 class Thumbnail extends React.Component<ThumbnailProps> {
     render() {
-        return <Fade bottom delay={this.delay()}><img id={this.props.id} className={"gallery-image " + this.props.display.form + "-thumbnail" + ((this.props.index % 2 === 0)? " even" : " odd")} 
+        return <Fade bottom delay={100}><img id={this.props.id} className={"gallery-image " + this.props.display.form + "-thumbnail" + ((this.props.index % 2 === 0)? " even" : " odd")} 
         onMouseDown={() => this.handleMouseEvent(true)} src={this.props.display.thumbSrc} alt={this.props.display.title}></img></Fade>;
     }
 
@@ -273,7 +273,6 @@ class Thumbnail extends React.Component<ThumbnailProps> {
     }
 
     delay(): number {
-        delay += 200;
         return delay;
     }
 }

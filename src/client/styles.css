@@ -7,8 +7,8 @@
 /* General Styles */
 
 a {
-        text-decoration: none;
-        color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .portfolio-container, .about-container, .code-container, .writing-container , .generic-container {
@@ -17,8 +17,17 @@ a {
     align-items: center;
 }
 
+.code-container {
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+.container {
+    margin: 0px 20px 0px 20px;
+}
+
 .container, .content {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -37,12 +46,17 @@ li {
 
 #header {
     display: flex;
-    padding: 10px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
     align-items: center;
 }
 
+#header-container {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
 .header {
-    border: 1px solid green;
+    width: 100%;
 }
 
 .name-button {
@@ -51,35 +65,19 @@ li {
     align-items: center;
 }
 
-.nav-flex {
+.nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid blue;
     align-self: flex-start;
 }
 
-.nav {
-    position: relative;
-    border: 1px solid red;
-    width: 100px;
-    flex: 1;
-}
-
 .nav-button-image {
-    z-index: 1;
+    z-index: 0;
     position: absolute;
-    border: 1px solid red;
-    width: 100px;
-    
 }
 
 .nav-bar {
-    z-index: 0;
+    z-index: 1;
     position: absolute;
-    border: 1px solid red;
-    width: 100px;
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -92,15 +90,14 @@ li {
     width: 30%;
 }
 
-.nav-button {
+/* .nav-button {
     width: 50%;
 }
-
 
 .nav-bar {
     padding-left: 10px;
     padding-bottom: 25px;
-}
+} */
 
 .name-button-image-white {
     display: none;
@@ -130,6 +127,7 @@ li {
 /* Portfolio Styles */
 
 .pop-up {
+    z-index: 2;
     top: 0;
     left: 0;
     position: fixed;
@@ -291,7 +289,8 @@ li {
 }
 
 .centered-container {
-    width: 70%;
+    /* width: 70%; */
+    
     max-width: 700px;
 }
 
@@ -399,7 +398,6 @@ h2 {
 /* Writing and Code Styles */
 
 .writing-and-code-links {
-    padding-top: 75px;
     margin-bottom: 75px;
 }
 
@@ -584,13 +582,41 @@ h2 {
     /* Tablet Header Styles */
     
     .nav-button-image {
-        width: 30%;
-        min-width: 100px;
+        width: 20%;
+        max-width: 120px;
     }
 
+    .nav-bar {
+        width: 20%;
+        max-width: 120px;
+    }
+
+
     .name-button-image {
-        width: 40%;
+        width: 20%;
         min-width: 150px;
+    }
+
+    .content {
+        padding-top: 0px;
+    }
+
+    #header-container {
+        width: 100%;
+    }
+    
+    .header {
+        width: 100%;
+    }
+
+    .nav-button {
+        width: 100%;
+    }
+    
+    .name-button {
+        display: flex;
+        flex: 1;
+        align-items: center;
     }
     
     
@@ -632,9 +658,9 @@ h2 {
 
      /* Tablet Portfolio Styles */
 
-    #gallery-container, .container {
+    /* #gallery-container, .container {
         padding-top: 50px; 
-    }
+    } */
 
     .gallery, .writing-and-code-links {
         width: 50%;
@@ -707,15 +733,44 @@ h2 {
  @media only screen and (min-width: 961px) {
 
     /* Desktop Header Styles */ 
-
+    
     .nav-button-image {
         width: 30%;
-        max-width: 140px;
+        max-width: 150px;
     }
 
+    .nav-bar {
+        width: 30%;
+        max-width: 150px;
+    }
+
+
     .name-button-image {
-        width: 35%;
-        min-height: 125px;
+        width: 20%;
+        min-width: 150px;
+    }
+
+    .content {
+        padding-top: 0px;
+    }
+
+    #header-container {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    
+    .header {
+        width: 100%;
+    }
+
+    .nav-button {
+        width: 100%;
+    }
+    
+    .name-button {
+        display: flex;
+        flex: 1;
+        align-items: center;
     }
      
     /* Desktop Landing Page Styles */
@@ -770,9 +825,9 @@ h2 {
 
     /* Desktop Portfolio Styles */
 
-    #gallery-container, .container {
+    /* #gallery-container, .container {
         padding-top: 100px; 
-    }
+    } */
 
     .gallery, .writing-and-code-links {
         width: 50%;

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ts-node src/server/index.ts",
     "dev": "parcel src/client/landing-page.html",
-    "build": "parcel build src/client/{*.css,*.tsx,landing-page.ts,header.ts}"
+    "build": "parcel build src/client/{*.css,*.tsx,landing-page.ts}"
   },
   "repository": {
     "type": "git",
