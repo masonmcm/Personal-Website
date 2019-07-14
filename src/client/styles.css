@@ -4,6 +4,131 @@
     box-sizing: border-box;
 }
 
+/* General Styles */
+
+a {
+        text-decoration: none;
+        color: black;
+}
+
+.portfolio-container, .about-container, .code-container, .writing-container , .generic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container, .content {
+    padding-top: 100px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio, .about, .code, .writing {  
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+/* Header Styles */
+
+#header {
+    display: flex;
+    padding: 10px 30px 30px 30px;
+    align-items: center;
+}
+
+.header {
+    border: 1px solid green;
+}
+
+.name-button {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid blue;
+    align-self: flex-start;
+}
+
+.nav {
+    position: relative;
+    border: 1px solid red;
+    width: 100px;
+    flex: 1;
+}
+
+.nav-button-image {
+    z-index: 1;
+    position: absolute;
+    border: 1px solid red;
+    width: 100px;
+    
+}
+
+.nav-bar {
+    z-index: 0;
+    position: absolute;
+    border: 1px solid red;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-button {
+    justify-content: flex-end;
+}
+
+.circular-nav-button {
+    width: 30%;
+}
+
+.nav-button {
+    width: 50%;
+}
+
+
+.nav-bar {
+    padding-left: 10px;
+    padding-bottom: 25px;
+}
+
+.name-button-image-white {
+    display: none;
+}
+
+.nav-bar-mobile {
+    display: none;
+}
+
+.display-header {
+    background-color: black;
+}
+
+.hide-image {
+    display: none;
+}
+/* Landing Page Styles */
+
+.white, .yellow, .blue, .red {
+    display: none;
+}
+
+.name-design {
+    margin: 10px; 
+}
+
+/* Portfolio Styles */
+
 .pop-up {
     top: 0;
     left: 0;
@@ -15,8 +140,9 @@
     align-items: center;
     justify-content: center;
     background-image: url(images/svg/lattice-background-3.svg);
+    background-size: 3000px;
+    
 }
-
 
 .fade-exit {
     opacity: 1;
@@ -44,29 +170,6 @@
     opacity: 1;
 }
 
-
-.white, .yellow, .blue, .red {
-    display: none;
-}
-
-.name-design {
-    margin: 10px; 
-}
-
-.portfolio-container, .about-container, .code-container, .writing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    min-height: 80vh;
-}
-
-.portfolio, .about, .code, .writing {  
-    width: 100%;
-}
-
 .pop-up-caption {
     background-color: black;
     padding: 10px;
@@ -79,11 +182,6 @@
 
 .pop-up-caption {
     padding: 10px 10px 20px 10px;
-}
-
-.pop-up-hidden {
-    border: 1px solid red;
-    display: none;
 }
 
 .gallery {
@@ -109,11 +207,6 @@
     visibility: hidden;
 }
 
-/* .form-container {
-    visibility: hidden;
-} */
-
-
 .pop-up-caption p {
     color: white;
     font-family: objektiv-mk1, sans-serif;
@@ -130,22 +223,6 @@
     font-style: italic;
 }
 
-#header {
-    display: flex;
-    padding: 10px 30px 30px 30px;
-    align-items: center;
-}
-
-.nav, .name-button {
-    display: flex;
-    flex: 1;
-    align-items: center;
-}
-
-.name-button {
-    justify-content: flex-end;
-}
-
 #gallery-container {
     display: flex;
     justify-content: center;
@@ -158,32 +235,49 @@
     justify-content: center;
 }
 
-.circular-nav-button {
-    width: 30%;
+.show-form {
+    font-weight: bold;
+    font-style: italic;
 }
 
-.nav-bar {
-    width: 30%;
-    max-width: 140px;
-    min-width: 110px;
-    padding-left: 10px;
-    padding-bottom: 25px;
+.pop-up-image-and-caption {
+    width: 40%;
+    min-width: 338px;
 }
 
-.name-button-image-white {
-    display: none;
-}
-
-.nav-bar-mobile {
-    display: none;
-}
-
-.container {
-    padding-top: 100px;
+.pop-up-body {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#arrow-left {
+    transform: rotate(180deg);
+}
+
+#exit-button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
+
+#exit-button {
+    width: 15%;
+}
+
+.background-black {
+    background-color: black;
+}
+
+/* About Styles */
+
 
 .profile-container {
     display: flex;
@@ -213,7 +307,6 @@
     font-weight: bold;
 }
 
-
 h1.exclamation-2 {
     font-weight: 400;
 }
@@ -226,18 +319,13 @@ h1.exclamation-3 {
     font-size: 2em;
 }
 
-em {
+.container em {
     font-weight: 400;
 }
 
 .container p, li {
     font-size: 1em;
 }
-
-li {
-    list-style: none;
-}
-
 
 h2 {
     margin-bottom: 25px;
@@ -249,7 +337,6 @@ h2 {
 
 .text-container {
     text-align: center;
-    /* margin-top: 100px; */
 }
 
 .coursework {
@@ -301,6 +388,15 @@ h2 {
     margin-bottom: 15px;
 }
 
+.about-links-container {
+    display: flex;
+}
+
+.exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
+    text-align: center;
+}
+
+/* Writing and Code Styles */
 
 .writing-and-code-links {
     padding-top: 75px;
@@ -318,64 +414,28 @@ h2 {
     font-weight: 400;
 }
 
-.about-links-container {
-    display: flex;
+.code-snippet {
+    font-family: monospace;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-
-
-
-.exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
-    text-align: center;
-}
-
-.show-form {
-    font-weight: bold;
-    font-style: italic;
-}
-
-.pop-up-image-and-caption {
-    width: 40%;
-    min-width: 338px;
-}
-
-.pop-up-body {
-    display: flex;
-    justify-content: space-between; 
-}
-
-.arrow-container {
+.code-arrow-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin: 30px 0px 30px 0px;
 }
 
-.arrow {
-    width: 30%;
-}
-
-#arrow-left {
+.white-arrow {
     transform: rotate(180deg);
 }
 
-#exit-button-container {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#exit-button {
-    width: 15%;
-}
-
-.background-black {
-    background-color: black;
-}
-
-
 /* Mobile Styles */
 @media only screen and (max-width: 415px) {  
+
+    /* Mobile Header Styles */ 
+
     .nav-bar-mobile {
         display: block;
         background-color: white;
@@ -411,18 +471,18 @@ h2 {
         width: 30%;
     }
 
-     /* Landing Page Styles */
+    .nav-button-image {
+        width: 30%;
+        min-width: 100px;
+    }
+
+     /* Mobile Landing Page Styles */
      
     .grid-item {
         margin: 12px;
     }
 
-    /* Portfolio Styles */
-
-    .nav-button-image {
-        width: 30%;
-        min-width: 100px;
-    }
+    /* Mobile Portfolio Styles */
     
     #gallery-container, .container {
         padding-top: 25px; 
@@ -454,9 +514,16 @@ h2 {
         width: 100%;
     }
 
-    .writing-and-code-links h2 {
+    .form-container h2 {
+        text-align: right;
         font-size: 1.2em;
-    }  
+    }
+
+    .table {
+        display: none;
+    }
+
+    /* Mobile About Styles */ 
 
     .profile-container {
         flex-direction: column;
@@ -470,7 +537,6 @@ h2 {
     .image-container {
         flex-direction: column;
         align-items: center;
-        /* border: 1px solid red; */
     }
 
     .image-container-links {
@@ -501,21 +567,34 @@ h2 {
         display: none;
     }
 
+    /* Mobile Writing and Code Links */ 
 
-    .form-container h2 {
-        text-align: right;
+    .writing-and-code-links h2 {
         font-size: 1.2em;
-    }
-
-    .table {
-        display: none;
-    }
+    }  
     
+    .white-arrow {
+        width: 25%;
+    }
 }
   
   /* Tablet Styles */
   @media only screen and (min-width: 415px) and (max-width: 960px) {
-    /* Landing Page Styles */
+    
+    /* Tablet Header Styles */
+    
+    .nav-button-image {
+        width: 30%;
+        min-width: 100px;
+    }
+
+    .name-button-image {
+        width: 40%;
+        min-width: 150px;
+    }
+    
+    
+    /* Tablet Landing Page Styles */
 
     .landing-page-container {
         display: flex;
@@ -551,17 +630,7 @@ h2 {
         flex: 1;  
     }
 
-     /* Portfolio Styles */
-
-     .nav-button-image {
-        width: 30%;
-        min-width: 100px;
-    }
-
-    .name-button-image {
-        width: 40%;
-        min-width: 150px;
-    }
+     /* Tablet Portfolio Styles */
 
     #gallery-container, .container {
         padding-top: 50px; 
@@ -572,7 +641,6 @@ h2 {
         min-width: 350px;
     }
 
-
     .pop-up-body {
         display: flex;
         justify-content: space-between;
@@ -582,9 +650,21 @@ h2 {
         width: 70%;
     }
 
-    .back-button-container {
+    .arrow {
+        width: 30%;
+        min-width: 50px;
+    }
+
+    .form-container h2 {
+        text-align: right;
+        font-size: 1.5em;
+    }
+
+    .table {
         display: none;
     }
+
+    /* Tablet About Styles */
 
     .profile-container {
         flex-direction: column;
@@ -602,10 +682,6 @@ h2 {
         margin-bottom: 30px;
     }
 
-    .writing-and-code-links h2 {
-        font-size: 1.2em;
-    }  
-
     .about-links-container {
         justify-content: space-between;
         margin-bottom: 75px;
@@ -615,20 +691,34 @@ h2 {
         min-width: 120px;
     }
 
-    .form-container h2 {
-        text-align: right;
-        font-size: 1.5em;
-    }
+    /* Tablet Writing and Code Styles */
 
-    .table {
-        display: none;
+    .writing-and-code-links h2 {
+        font-size: 1.2em;
+    }  
+
+    .white-arrow {
+        width: 15%;
     }
   }
   
+
  /* Desktop Styles */
  @media only screen and (min-width: 961px) {
+
+    /* Desktop Header Styles */ 
+
+    .nav-button-image {
+        width: 30%;
+        max-width: 140px;
+    }
+
+    .name-button-image {
+        width: 35%;
+        min-height: 125px;
+    }
      
-    /* Landing Page Styles */
+    /* Desktop Landing Page Styles */
 
     .landing-page-container {
         display: flex;
@@ -671,7 +761,6 @@ h2 {
         flex: 1;
         max-width: 450px;
         margin-left: 15px;
-        /* border: 1px solid red; */
     }
 
     .name-design {
@@ -679,18 +768,7 @@ h2 {
         flex: 1;
     }
 
-    /* Portfolio Styles */
-
-
-    .nav-button-image {
-        width: 30%;
-        max-width: 140px;
-    }
-
-    .name-button-image {
-        width: 35%;
-        min-height: 125px;
-    }
+    /* Desktop Portfolio Styles */
 
     #gallery-container, .container {
         padding-top: 100px; 
@@ -710,6 +788,11 @@ h2 {
         width: 30%;
     }
 
+    .arrow {
+        width: 30%;
+        min-width: 50px;
+    }
+
     .back-button-container {
         display: none;
     }
@@ -727,19 +810,6 @@ h2 {
         justify-content: space-between;
     }
 
-    .writing-and-code-links h2 {
-        font-size: 1.5em;
-    }
-
-    .about-links-container {
-        justify-content: space-between;
-        margin-bottom: 75px;
-    }
-
-    .exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
-        text-align: left;
-    }
-
     .table {
         display: table;
         position: fixed;
@@ -753,11 +823,6 @@ h2 {
     
     ul#gallery-selector li, .gallery-link {
         display: inline;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
     }
 
     .form-container h2 {
@@ -775,5 +840,24 @@ h2 {
     .hide-form {
         font-weight: 200;
         font-style: none;
+    }
+
+    /* Desktop Writing and Code Styles */
+
+    .writing-and-code-links h2 {
+        font-size: 1.5em;
+    }
+
+    .about-links-container {
+        justify-content: space-between;
+        margin-bottom: 75px;
+    }
+
+    .exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
+        text-align: left;
+    }
+
+    .white-arrow {
+        width: 10%;
     }
   }

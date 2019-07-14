@@ -25,8 +25,6 @@ let main = () => {
         }
     });
 
-    //  console.log(document.getElementById("2D-container").offsetTop);
-
 
     for(let i = 0; i < forms.length; i++) {
         if(formsRecord[forms[i]] === true){
@@ -38,6 +36,7 @@ let main = () => {
             this.document.getElementById(forms[i]).classList.remove("show-form");
         }
     }
+    
     });
 
     ReactDOM.render(
@@ -79,6 +78,7 @@ type PopUpProps = {
 
 type PopUpState = {
     hidden: boolean
+    transitioning: boolean;
 }
 
 
@@ -205,15 +205,17 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
         super(props);
 
         this.state = {
-            hidden: this.props.hidden
+            hidden: this.props.hidden,
+            transitioning: true
         };
     }
 
     render() {
         return <div className="pop-up">
-                    <div className="pop-up-body">
+            <Fade delay={500} when={this.props.showNewImage}>
+                    <div className="pop-up-body" onLoad={() => this.setState({transitioning: false})}>
                         <div className="arrow-container"><img className={"arrow" + ((this.props.display.id === gallery[0].props.display.id)? " hidden" : "")} id="arrow-left" src="images/svg/gallery-arrow-2.svg" 
-                        onMouseDown={() => this.showNewImage(this.props.display, "left")}></img></div>
+                        onMouseDown={() => this.showNewImage(this.props.display, "left") }></img></div>
                         <div className={this.generatePopUpSize()}>
                             <div className="background-black">
                                 <img className="pop-up-image" src={this.props.display.src} alt="image"></img>
@@ -227,6 +229,7 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
                         </div>
                         <div className="arrow-container"><img className={"arrow" + ((this.props.display.id === gallery[gallery.length - 1].props.display.id)? " hidden" : "")} id="arrow-right" src="images/svg/gallery-arrow-2.svg" onMouseDown={() => this.showNewImage(this.props.display, "right")}></img></div>
                     </div>
+                    </Fade>
                </div>;
     }
 
@@ -242,9 +245,10 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
     }
 
     showNewImage(display: Display, direction: string) {
+        console.log(this.state.transitioning);
+        this.setState({transitioning: true});
+        
         if(this.props.hide !== undefined){
-            console.log(this.props.display.id);
-            console.log(gallery[0].props.display.id);
             this.props.showNewImage(display, direction);
         }
     }
