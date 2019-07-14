@@ -22,12 +22,7 @@ a {
     margin-top: 25px;
 }
 
-.container {
-    margin: 0px 20px 0px 20px;
-}
-
 .container, .content {
-    /* padding-top: 100px; */
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -432,6 +427,12 @@ h2 {
 /* Mobile Styles */
 @media only screen and (max-width: 415px) {  
 
+    /* Mobile General Styles */ 
+
+    .container {
+        padding: 0px 10px 0px 10px;
+    }
+
     /* Mobile Header Styles */ 
 
     .nav-bar-mobile {
@@ -517,9 +518,10 @@ h2 {
         font-size: 1.2em;
     }
 
-    .table {
+    .table, .arrow-container {
         display: none;
     }
+
 
     /* Mobile About Styles */ 
 

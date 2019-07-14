@@ -7,16 +7,6 @@ let main = () => {
     ReactDOM.render(<LandingPage/>, document.getElementById("landing-page-container"));
 };
 
-let load = () => {
-    loaded = true;
-}
-
-let unload = () => {
-    loaded = false;
-}
-
-let loaded = true;
-
 type LandingPageState = {
     chosenColor: string
     pageLoaded: boolean
@@ -48,25 +38,29 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState>{
                 <div className="nav-grid-container">
                     <Fade left delay={100}><div className="nav-grid">
                         <div className="nav-row nav-row-top">
-                            <div className="grid-item grid-item_portfolio">
-                                <a href="portfolio.html">
+                            <div className="grid-item grid-item_portfolio" onMouseOver={() => this.onHover("plain",  "white")}
+                                onMouseOut={() => this.onHover("white",  "plain")}>
+                                <a href="portfolio">
                                 <img className="grid-image" src="./images/svg/portfolio-button_label.svg" alt="portfolio-button"></img>
                                 </a>
                             </div>
-                        <div className="grid-item grid-item_code">
-                            <a href="code.html">
+                        <div className="grid-item grid-item_code" onMouseOver={()=>this.onHover("plain",  "yellow")}
+                            onMouseOut={()=>this.onHover("yellow",  "plain")}>
+                            <a href="code">
                             <img className="grid-image" src="./images/svg/code-button_label.svg" alt="code-button"></img>
                             </a>
                         </div>
                         </div>
                         <div className="nav-row nav-row-bottom">
-                            <div className="grid-item grid-item_writing">
-                                <a href="writing.html">
+                            <div className="grid-item grid-item_writing" onMouseOver={()=>this.onHover("plain",  "blue")}
+                                onMouseOut={()=>this.onHover("blue",  "plain")}>
+                                <a href="writing">
                                 <img className="grid-image" src="./images/svg/writing-button_label.svg" alt="writing-button"></img>
                                 </a>
                             </div>
-                            <div className="grid-item grid-item_about">
-                                <a href="about.html">
+                            <div className="grid-item grid-item_about" onMouseOver={()=>this.onHover("plain",  "red")}
+                            onMouseOut={()=>this.onHover("red",  "plain")}>
+                                <a href="about">
                                 <img className="grid-image" src="./images/svg/about-button_label.svg" alt="about-button"></img>
                                 </a>    
                             </div>
@@ -75,9 +69,15 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState>{
                 </div>
             </div>
         }
+
+    onHover(hide: string, show: string) {
+        const hideElement = document.getElementsByClassName(hide)[0] as HTMLElement;
+        const showElement = document.getElementsByClassName(show)[0] as HTMLElement;
+        
+        hideElement.style.display = "none";
+        showElement.style.display = "block";
+    };
 }
 
 
-window.addEventListener("load", load);
-window.addEventListener("onunload", unload);
 window.addEventListener("load", main);
