@@ -318,7 +318,7 @@ h1.exclamation-3 {
     font-size: 2em;
 }
 
-.container em {
+.writing-and-code-links em {
     font-weight: 400;
 }
 
@@ -610,7 +610,7 @@ h2 {
     }
 
     .nav-button {
-        width: 100%;
+        width: 90%;
     }
     
     .name-button {
@@ -764,7 +764,7 @@ h2 {
     }
 
     .nav-button {
-        width: 100%;
+        width: 90%;
     }
     
     .name-button {
@@ -825,9 +825,6 @@ h2 {
 
     /* Desktop Portfolio Styles */
 
-    /* #gallery-container, .container {
-        padding-top: 100px; 
-    } */
 
     .gallery, .writing-and-code-links {
         width: 50%;
