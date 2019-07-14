@@ -36,6 +36,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.1.2",
+    "lodash": "^4.17.14",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-responsive": "^7.0.0",
