@@ -2,6 +2,13 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import { Fade } from "react-reveal";
+import {
+    BroswerRouter as Router, 
+    Switch, 
+    Route, 
+    Link, 
+    Redirect
+} from 'react-router-dom'
 
 let main = () => {
     ReactDOM.render(<LandingPage/>, document.getElementById("landing-page-container"));
