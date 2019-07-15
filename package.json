@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ts-node src/server/index.ts",
     "dev": "parcel src/client/landing-page.html",
-    "build": "parcel build src/client/{*.css,*.tsx,landing-page.ts}",
+    "build": "parcel build src/client/{*.css,*.tsx}",
     "play": "parcel src/playground/react-router/index.html"
   },
   "repository": {
