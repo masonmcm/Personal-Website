@@ -2,13 +2,6 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import { Fade } from "react-reveal";
-import {
-    BroswerRouter as Router, 
-    Switch, 
-    Route, 
-    Link, 
-    Redirect
-} from 'react-router-dom'
 
 let main = () => {
     ReactDOM.render(<LandingPage/>, document.getElementById("landing-page-container"));
@@ -42,7 +35,6 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState>{
                     <img className="name-design blue" src="./images/svg/blue-design.svg" alt="Mason Mathew"></img>
                     <img className="name-design red" src="./images/svg/red-design.svg" alt="Mason Mathew"></img>
                 </div></Fade>
-                <div className="animsition">
                 <div className="nav-grid-container">
                     <Fade left delay={100}><div className="nav-grid">
                         <div className="nav-row nav-row-top">
@@ -76,7 +68,6 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState>{
                     </div></Fade>
                 </div>
                 </div>
-            </div>
         }
 
     onHover(hide: string, show: string) {
