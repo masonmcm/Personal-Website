@@ -19,8 +19,8 @@ let main = () => {
 
         if(formThumbnails.length !== 0) {
             if(first !== null && last !== null){
-                formsRecord[form] = ((window.scrollY > first.offsetTop - 300) &&
-                (window.scrollY < last.offsetTop - 300) ? true : false);
+                formsRecord[form] = ((window.scrollY > first.offsetTop - 150) &&
+                (window.scrollY < last.offsetTop) ? true : false);
             }
         }
     });
@@ -116,12 +116,14 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
         return <div className="gallery-pop-up-container">
         <div className="gallery">
             {this.generateGalleryMediaQuery(this.state.forms)}  
+        <div className="fixed-arrow-container">
+            <img className="fixed-arrow" src="./images/svg/white-arrow.svg"></img>
+        </div>
         <div className="table-container">
             <div className="table">
             <Fade bottom delay={500}><ul id="gallery-selector">
                 {forms.map((form) => {
-                    return <li key={form}><a href={"portfolio.html#" + form + "-container"}><p className="gallery-link" id={form} 
-                    onMouseOver={() => this.handleMouseEvent(form, "bold", "italic")} onMouseLeave={() => this.handleMouseEvent(form, "200", "normal")}>{form}</p></a>
+                    return <li key={form}><p className="gallery-link" id={form} >{form}</p>
                     {(form === forms[forms.length - 1]) ? "" : " /"}</li>
                 })}
             </ul></Fade>

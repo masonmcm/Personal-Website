@@ -26,76 +26,48 @@ app.get("/portfolio", (req, res) => {
     res.render("portfolio", {
         title: "Portfolio",
         header: true,
-        displayHeader: false, 
         imageURL: "./images/svg/portfolio-button.svg"
     })
 });
 
-app.get("/portfolio?header=visible", (req, res) => {
-    res.render("portfolio", {
-        title: "Portfolio",
-        header: true, 
-        displayHeader: true,
-        imageURL: "./images/svg/portfolio-button.svg"
-    })
-});
 
 app.get("/about", (req, res) => {
     res.render("about", {
         title: "About",
         header: true, 
-        displayHeader: false,
         imageURL: "./images/svg/about-button.svg"
     })
 });
 
-app.get("/about?header=visible", (req, res) => {
-    res.render("about", {
-        title: "About",
-        header: true, 
-        displayHeader: true,
-        imageURL: "./images/svg/about-button.svg"
-    })
-});
 
 app.get("/code", (req, res) => {
     res.render("code", {
         title: "Code",
         header: true,
-        displayHeader: false,
         imageURL: "./images/svg/code-button.svg"
     })
 });
 
-app.get("/code?header=visible", (req, res) => {
-    res.render("code", {
-        title: "Code",
-        header: true,
-        displayHeader: true,
-        imageURL: "./images/svg/code-button.svg"
-    })
-});
 
 app.get("/writing", (req, res) => {
     res.render("writing", {
         title: "Writing",
         header: true, 
-        displayHeader: false,
         imageURL: "./images/svg/writing-button.svg"
     })
 });
 
-app.get("/writing?header=visible", (req, res) => {
-    res.render("writing", {
-        title: "Writing",
+app.get("/code-1", (req, res) => {
+    res.render("code-1", {
+        title: "Code 1",
         header: true, 
-        displayHeader: true,
         imageURL: "./images/svg/writing-button.svg"
     })
 });
+
 
 export let main = async () => {
-app.listen(1234, () => console.log("Listining on port 1234"))
+app.listen(1234, () => console.log("Listening on port 1234"))
     .on('error', (e) => console.error(e));
 };
 

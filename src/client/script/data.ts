@@ -10,7 +10,7 @@ export default [
         "date": 2015,
         "medium": "Acrylic on Canvas",
         "form": "2D",
-        "size": "wide"
+        "size": "regular"
     },
 
     {
@@ -23,7 +23,7 @@ export default [
         "date": 2016,
         "medium": "Acrylic and housepaint on canvas",
         "form": "2D",
-        "size": "regular"
+        "size": "narrow"
     },
 
     {
@@ -36,7 +36,7 @@ export default [
         "date": 2016,
         "medium": "Acrylic and housepaint on canvas",
         "form": "2D",
-        "size": "regular"
+        "size": "narrow"
     },
 
     {
@@ -62,7 +62,7 @@ export default [
         "date": 2016,
         "medium": "Wood, Ceramic, Acrylic",
         "form": "3D",
-        "size": "regular"
+        "size": "narrow"
     },
 
     {
@@ -154,7 +154,7 @@ export default [
         "date": 2016,
         "medium": "Bedsheet, Housepaint, Pantyhose, misc.",
         "form": "3D",
-        "size": "regular"
+        "size": "narrow"
     },
 
 
@@ -182,5 +182,135 @@ export default [
         "medium": "Acrylic and housepaint on canvas shirt",
         "form": "2D",
         "size": "narrow"
+    },
+
+    {
+        "id": 14,
+        "thumbSrc": "./images/jpg/thumb/picture-1_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-1_full.jpg",
+        "title": "1",
+        "relativeUrl": "1",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 15,
+        "thumbSrc": "./images/jpg/thumb/picture-2_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-2_full.jpg",
+        "title": "2",
+        "relativeUrl": "2",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 16,
+        "thumbSrc": "./images/jpg/thumb/picture-3_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-3_full.jpg",
+        "title": "3",
+        "relativeUrl": "3",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 17,
+        "thumbSrc": "./images/jpg/thumb/picture-4_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-4_full.jpg",
+        "title": "4",
+        "relativeUrl": "4",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 18,
+        "thumbSrc": "./images/jpg/thumb/picture-5_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-5_full.jpg",
+        "title": "5",
+        "relativeUrl": "5",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 19,
+        "thumbSrc": "./images/jpg/thumb/picture-6_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-6_full.jpg",
+        "title": "6",
+        "relativeUrl": "6",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 20,
+        "thumbSrc": "./images/jpg/thumb/picture-7_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-7_full.jpg",
+        "title": "7",
+        "relativeUrl": "7",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 21,
+        "thumbSrc": "./images/jpg/thumb/picture-8_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-8_full.jpg",
+        "title": "8",
+        "relativeUrl": "8",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 22,
+        "thumbSrc": "./images/jpg/thumb/picture-9_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-9_full.jpg",
+        "title": "9",
+        "relativeUrl": "9",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
+    },
+
+    {
+        "id": 23,
+        "thumbSrc": "./images/jpg/thumb/picture-10_thumb.jpg",
+        "src": "./images/jpg/full-size/picture-10_full.jpg",
+        "title": "10",
+        "relativeUrl": "10",
+        "collab": "none",
+        "date": 2019,
+        "medium": "Film",
+        "form": "Photography",
+        "size": "wide"
     },
 ]

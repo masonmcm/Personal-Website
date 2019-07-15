@@ -9,7 +9,7 @@ let main = () => {
 };
 
 const codePage = <Fade bottom delay={100}><div className="writing-and-code-links">
-                    <a href="code-1.html"><h2><em>Insertion Sort</em> in Scheme</h2></a>
+                    <a href="code-1"><h2><em>Insertion Sort</em> in Scheme</h2></a>
                     <h2><em>iOS Application</em> in Swift</h2>
                     <h2><em>Personal Website</em> in TypeScript</h2>
                 </div></Fade>;
