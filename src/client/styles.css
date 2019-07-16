@@ -4,6 +4,37 @@
     box-sizing: border-box;
 }
 
+/* Transition Styles */
+
+   .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 200ms linear;
+  }
+
+  .fade-appear{
+      opacity: 0;
+  }
+
+  .fade-appear-active{
+   opacity: 1;
+   transition: opacity 200ms linear;
+  }
+
+  .fade-exit {
+    opacity: 1;
+  }
+
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 200ms linear;
+  }
+
+
+
 /* General Styles */
 
 a {
@@ -15,6 +46,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.portfolio-content {
+    width: 100%;
+}
+
+.generic-container {
+    flex-direction: column;
 }
 
 .code-container {
@@ -137,7 +176,7 @@ li {
     
 }
 
-.fade-exit {
+/* .fade-exit {
     opacity: 1;
 }
 
@@ -152,16 +191,16 @@ li {
 
 .fade-enter {
     opacity: 0;
-}
+} */
 
-.fade-enter-active {
+/* .fade-enter-active {
     opacity: 1;
     transition: opacity 1000ms linear;
 }
 
 .fade-enter-done {
     opacity: 1;
-}
+} */
 
 .pop-up-caption {
     background-color: black;
@@ -271,7 +310,6 @@ li {
 
 /* About Styles */
 
-
 .profile-container {
     display: flex;
 }
@@ -283,19 +321,23 @@ li {
     margin-bottom: 40px;
 }
 
+.about-center-container {
+    display: flex; 
+    justify-content: center;
+}
+
 .centered-container {
-    /* width: 70%; */
-    
     max-width: 700px;
 }
 
-.container h1, h2, p, li, h3 {
+.centered-container h1, h2, p, li, h3 {
     font-family: objektiv-mk1, sans-serif;
     font-weight: 200;
     font-style: normal;
 }
 
-.container h1 {
+
+.centered-container h1 {
     font-size: 3em;
     font-style: italic;
     font-weight: bold;
@@ -518,7 +560,7 @@ h2 {
         font-size: 1.2em;
     }
 
-    .table, .arrow-container, .fixed-arrow-container {
+    .table, .arrow-container, .fixed-arrow {
         display: none;
     }
 
@@ -688,7 +730,7 @@ h2 {
         font-size: 1.5em;
     }
 
-    .table, .fixed-arrow-container {
+    .table, .fixed-arrow {
         display: none;
     }
 
@@ -839,15 +881,15 @@ h2 {
     }
 
     .pop-up-narrow {
-        width: 35%;
+        width: 30%;
     }
 
     .pop-up-regular {
-        width: 45%;
+        width: 40%;
     }
 
     .pop-up-wide {
-        width: 60%;
+        width: 50%;
     }
 
     .arrow {
@@ -855,16 +897,14 @@ h2 {
         min-width: 50px;
     }
 
-    .fixed-arrow-container {
+
+    .fixed-arrow {
+        transform: rotate(270deg);
+        width: 5%;  
         position: fixed;
         left: 20px;
         bottom: 30px;
         display: flex;
-    }
-
-    .fixed-arrow {
-        transform: rotate(270deg);
-        width: 25%;
     }
 
     .back-button-container {

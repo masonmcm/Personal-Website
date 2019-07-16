@@ -2,6 +2,18 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import { Fade } from "react-reveal";
+import AboutPage from "./about";
+import {
+    Route,
+    NavLink,
+    BrowserRouter, 
+    Switch
+} from "react-router-dom";
+
+import {
+    TransitionGroup, 
+    CSSTransition
+  } from "react-transition-group";
 
 let main = () => {
     ReactDOM.render(<LandingPage/>, document.getElementById("landing-page-container"));
@@ -28,45 +40,45 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState>{
     
     render() {
         return <div className="landing-page">
-                <Fade right delay={100}><div className="name-design-container">
+                <Fade right><div className="name-design-container">
                     <img className="name-design plain" src="./images/svg/plain-design.svg" alt="Mason Mathew"></img>
                     <img className="name-design white" src="./images/svg/white-design.svg" alt="Mason Mathew"></img>
                     <img className="name-design yellow" src="./images/svg/yellow-design.svg" alt="Mason Mathew"></img>
                     <img className="name-design blue" src="./images/svg/blue-design.svg" alt="Mason Mathew"></img>
                     <img className="name-design red" src="./images/svg/red-design.svg" alt="Mason Mathew"></img>
                 </div></Fade>
-                <div className="nav-grid-container">
-                    <Fade left delay={100}><div className="nav-grid">
+                <Fade left><div className="nav-grid-container">
+                    <div className="nav-grid">
                         <div className="nav-row nav-row-top">
-                            <div className="grid-item grid-item_portfolio" onMouseOver={() => this.onHover("plain",  "white")}
+                        <a href="portfolio" className="grid-item grid-item_portfolio" onMouseOver={() => this.onHover("plain",  "white")}
                                 onMouseOut={() => this.onHover("white",  "plain")}>
-                                <a href="portfolio" className="animsition-link">
-                                <img className="grid-image" src="./images/svg/portfolio-button_label.svg" alt="portfolio-button"></img>
-                                </a>
+                            <div>
+                                <img className="grid-image" src="./images/svg/portfolio-button_label.svg" alt="portfolio-button"></img> 
                             </div>
-                        <div className="grid-item grid-item_code" onMouseOver={()=>this.onHover("plain",  "yellow")}
+                        </a>
+                        <a href="code" className="grid-item grid-item_code" onMouseOver={()=>this.onHover("plain",  "yellow")}
                             onMouseOut={()=>this.onHover("yellow",  "plain")}>
-                            <a href="code" className="animsition-link">
+                        <div>
                             <img className="grid-image" src="./images/svg/code-button_label.svg" alt="code-button"></img>
-                            </a>
                         </div>
+                        </a>
                         </div>
                         <div className="nav-row nav-row-bottom">
-                            <div className="grid-item grid-item_writing" onMouseOver={()=>this.onHover("plain",  "blue")}
+                        <a href="writing" className="grid-item grid-item_writing" onMouseOver={()=>this.onHover("plain",  "blue")}
                                 onMouseOut={()=>this.onHover("blue",  "plain")}>
-                                <a href="writing" className="animsition-link">
+                            <div>
                                 <img className="grid-image" src="./images/svg/writing-button_label.svg" alt="writing-button"></img>
-                                </a>
                             </div>
-                            <div className="grid-item grid-item_about" onMouseOver={()=>this.onHover("plain",  "red")}
+                        </a>
+                        <a href="about" className="grid-item grid-item_about" onMouseOver={()=>this.onHover("plain",  "red")}
                             onMouseOut={()=>this.onHover("red",  "plain")}>
-                                <a href="about" className="animsition-link">
+                            <div>
                                 <img className="grid-image" src="./images/svg/about-button_label.svg" alt="about-button"></img>
-                                </a>    
                             </div>
+                        </a>
                         </div>
-                    </div></Fade>
-                </div>
+                    </div>
+                </div></Fade>
                 </div>
         }
 
@@ -81,3 +93,5 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState>{
 
 
 window.addEventListener("load", main);
+
+export default LandingPage;

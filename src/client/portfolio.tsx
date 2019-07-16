@@ -4,9 +4,11 @@ import ReactDOM from "react-dom";
 
 
 // 2. Import our Data
-import data from "./script/data"
-import Fade from 'react-reveal/Fade'
+import data from "./script/data";
+import Fade from 'react-reveal/Fade';
+import Header from './header';
 import { CSSTransition } from 'react-transition-group';
+import ScrollToTop from "react-scroll-up";
 import './styles.css';
 
 let main = () => {
@@ -36,12 +38,13 @@ let main = () => {
             this.document.getElementById(forms[i]).classList.remove("show-form");
         }
     }
+
     
     });
 
     ReactDOM.render(
-        <Gallery displays={data} />, 
-        document.getElementById("gallery-container"));
+        <Gallery displays={data}/>, 
+        document.getElementById("portfolio-container"));
 };
 
 const forms = ["2D", "3D", "Photography"];
@@ -83,12 +86,13 @@ type PopUpState = {
 
 
 type GalleryProps = {
-    displays: Display[]
+    displays: Display[],
 }
 
 type GalleryState = {
     selected: Display,
     showPopUp: boolean, 
+    scrolled: boolean,
     forms: string[]
 }
 
@@ -100,6 +104,7 @@ type ThumbnailProps = {
     onSelect?: (display: Display, showPopUp: boolean) => void,
 }
 
+
 class Gallery extends React.Component<GalleryProps, GalleryState> {
     constructor(props) {
         super(props);
@@ -107,18 +112,21 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
         this.state = {
             selected: this.props.displays[0],
             showPopUp: false,
-            forms: forms
+            forms: forms, 
+            scrolled: window.scrollY > 15
         };
         
     }
 
     render() {
-        return <div className="gallery-pop-up-container">
+        return <div className="portfolio-content" onMouseOver={() => this.setState({scrolled: true})}
+        onMouseLeave={() => this.setState({scrolled: false})}>
+        <div className="gallery-pop-up-container">
         <div className="gallery">
             {this.generateGalleryMediaQuery(this.state.forms)}  
-        <div className="fixed-arrow-container">
-            <img className="fixed-arrow" src="./images/svg/white-arrow.svg"></img>
-        </div>
+        <ScrollToTop showUnder={160}>
+            <img id="fixed-arrow" className="fixed-arrow" src="./images/svg/white-arrow.svg"></img>
+        </ScrollToTop>
         <div className="table-container">
             <div className="table">
             <Fade bottom delay={500}><ul id="gallery-selector">
@@ -140,6 +148,7 @@ class Gallery extends React.Component<GalleryProps, GalleryState> {
         <PopUp hidden={!this.state.showPopUp} display={this.state.selected} hide={() => this.setState({showPopUp: false})}
                 showNewImage={(display, direction) => this.showNewImage(display, direction)}/>
         </CSSTransition>
+        </div>
         </div>;
     }
 
@@ -273,11 +282,6 @@ class Thumbnail extends React.Component<ThumbnailProps> {
             this.props.onSelect(this.props.display, showPopUp);
         }
     }
-
-    delay(): number {
-        return delay;
-    }
 }
 
 window.addEventListener("load", main);
-window.addEventListener("load", () => {delay = 0});
