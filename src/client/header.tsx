@@ -30,12 +30,12 @@ class Header extends React.Component<HeaderProps, HeaderState>{
     return <Fade top delay={100}><div id="header" className="header" onMouseLeave={() => this.setState({navHidden: true})}>
         <div className="nav-bar-mobile">
             <div className="nav-row-mobile">
-                <a className="nav-button-mobile" href="portfolio.html"><img src="./images/svg/portfolio-label_black_linear.svg"></img></a>
-                <a className="nav-button-mobile" href="code.html"><img src="./images/svg/code-label_black_linear.svg"></img></a>
+                <a className="nav-button-mobile" href="portfolio"><img src="./images/svg/portfolio-label_black_linear.svg"></img></a>
+                <a className="nav-button-mobile" href="code"><img src="./images/svg/code-label_black_linear.svg"></img></a>
             </div>
             <div className="nav-row-mobile">
-                <a className="nav-button-mobile" href="about.html"><img src="./images/svg/about-label_black_linear.svg"></img></a>
-                <a className="nav-button-mobile" href="writing.html"><img src="./images/svg/writing-label_black_linear.svg"></img></a>
+                <a className="nav-button-mobile" href="about"><img src="./images/svg/about-label_black_linear.svg"></img></a>
+                <a className="nav-button-mobile" href="writing"><img src="./images/svg/writing-label_black_linear.svg"></img></a>
             </div>
         </div>
         <div className="nav">  
@@ -48,9 +48,11 @@ class Header extends React.Component<HeaderProps, HeaderState>{
                     <a href="about?header=visible"><img className="nav-button" src="./images/svg/about-label_black_slant.svg"></img></a>
             </div></Fade>
     </div>
-   <a className="name-button" href="/">
-        <img className="name-button-image name-button-image-black" src="./images/svg/mason-mathew-black.svg" alt="mason-mathew"></img>
-    </a>
+   <div className="name-button" >
+        <a className="name-button-image name-button-image-black" href="/">
+            <img className="header-name" src="./images/svg/mason-mathew-black.svg" alt="mason-mathew"></img>
+        </a>
+    </div>
     </div>
     </Fade>
     }

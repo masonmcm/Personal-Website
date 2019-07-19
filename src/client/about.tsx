@@ -3,6 +3,8 @@ import * as React from "react";
 import ReactDOM from "react-dom";
 import Fade from 'react-reveal/Fade';
 import Header from './header';
+import ScrollToTop from "react-scroll-up";
+
 
 
 let main = () => {
@@ -13,6 +15,9 @@ class AboutPage extends React.Component {
 
         render() { 
         return <div className="about-content">
+            <ScrollToTop showUnder={160}>
+                <img id="fixed-arrow" className="fixed-arrow" src="./images/svg/white-arrow.svg"></img>
+            </ScrollToTop>
             <div className="about-center-container">
             <div className="centered-container">
             <div className="profile-container">
@@ -127,9 +132,9 @@ class AboutPage extends React.Component {
         </div></Fade>
         <Fade right><img className="page-break" src="images/svg/page-break.svg"></img></Fade>
         <div className="about-links-container"> 
-           <Fade bottom><img className="about-link" src="images/svg/resume-label.svg"></img></Fade>
-           <Fade bottom delay={500}><img className="about-link" src="images/svg/linkedin-label.svg"></img></Fade>
-           <Fade bottom delay={1000}> <img className="about-link" src="images/svg/transcript-label.svg"></img></Fade>
+           <Fade bottom><h2>Resume</h2></Fade>
+           <Fade bottom delay={500}><h2>Transcript</h2></Fade>
+           <Fade bottom delay={1000}><h2>LinkedIn</h2></Fade>
         </div> 
         </div>
         </div>

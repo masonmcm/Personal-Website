@@ -6,7 +6,7 @@
 
 /* Transition Styles */
 
-   .fade-enter {
+  .fade-enter {
     opacity: 0;
   }
 
@@ -32,8 +32,6 @@
     opacity: 0;
     transition: opacity 200ms linear;
   }
-
-
 
 /* General Styles */
 
@@ -133,9 +131,6 @@ li {
     padding-bottom: 25px;
 } */
 
-.name-button-image-white {
-    display: none;
-}
 
 .nav-bar-mobile {
     display: none;
@@ -148,6 +143,11 @@ li {
 .hide-image {
     display: none;
 }
+
+.header-name {
+    width: 100%;
+}
+
 /* Landing Page Styles */
 
 .white, .yellow, .blue, .red {
@@ -479,9 +479,9 @@ h2 {
 
     .nav-bar-mobile {
         display: block;
-        background-color: white;
         padding-bottom: 10px;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
+        width: 100%;
     }
 
     .name-button-image {
@@ -492,9 +492,13 @@ h2 {
         display: none;
     }
 
+    #header-container {
+        margin-bottom: 40px;
+    }
+
     #header {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
     }
 
     .name-button {
@@ -509,7 +513,7 @@ h2 {
 
     .nav-button-mobile {
         margin: 20px;
-        width: 30%;
+        width: 45%;
     }
 
     .nav-button-image {
@@ -542,13 +546,27 @@ h2 {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         background-color: black;
     }
 
+    .pop-up-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pop-up-caption {
+        text-align: center;
+    }
+
     .pop-up-image {
         max-height: 425px;
+        width: 100%;
+        margin: 0 1 auto;
     }
     
     .pop-up-wide {
