@@ -287,6 +287,7 @@ li {
     justify-content: center;
     align-items: center;
     padding: 5px;
+    border: 1px solid 
 }
 
 #arrow-left {
@@ -328,6 +329,7 @@ li {
 
 .centered-container {
     max-width: 700px;
+    padding: 10px;
 }
 
 .centered-container h1, h2, p, li, h3 {
@@ -394,8 +396,12 @@ h2 {
     margin-bottom: 100px;
 }
 
+.image-container {
+    max-width: 700px;
+}
 .about-page-image {
     width: 60%;
+    height: 60%;
 }
 
 .image-caption-container {
@@ -464,6 +470,10 @@ h2 {
 
 .white-arrow {
     transform: rotate(180deg);
+}
+
+.code-text h2, p {
+    text-align: center;
 }
 
 /* Mobile Styles */
@@ -729,9 +739,13 @@ h2 {
         min-width: 350px;
     }
 
+    .pop-up-image-and-caption {
+        border: 1px solid
+    }
     .pop-up-body {
         display: flex;
         justify-content: space-between;
+        border: 1px solid blue;
     }
     
     .pop-up-wide {
@@ -741,7 +755,9 @@ h2 {
     .arrow {
         width: 30%;
         min-width: 50px;
+        max-width: 80px;
     }
+
 
     .form-container h2 {
         text-align: right;
@@ -881,6 +897,7 @@ h2 {
     }
 
     .name-design {
+        max-width: 450px;
         margin: 0 auto;
         flex: 1;
     }
@@ -913,6 +930,7 @@ h2 {
     .arrow {
         width: 30%;
         min-width: 50px;
+        max-width: 80px;
     }
 
 
@@ -992,4 +1010,10 @@ h2 {
     .white-arrow {
         width: 10%;
     }
+
+     /* Desktop About Styles */
+
+     .profile {
+         max-height: 330px;
+     }
   }
