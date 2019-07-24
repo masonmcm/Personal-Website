@@ -470,6 +470,11 @@ h2 {
 
 .white-arrow {
     transform: rotate(180deg);
+    position: fixed;
+    width: 10%;  
+    max-width: 60px;
+    left: 20px;
+    bottom: 30px;
 }
 
 .code-text h2, p {
@@ -644,7 +649,8 @@ h2 {
     }  
     
     .white-arrow {
-        width: 25%;
+        width: 15%;
+        left: 10px;
     }
 }
   

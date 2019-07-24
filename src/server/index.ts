@@ -60,7 +60,7 @@ app.get("/writing", (req, res) => {
 app.get("/code-1", (req, res) => {
     res.render("code-1", {
         title: "Code 1",
-        header: true, 
+        header: false, 
         imageURL: "./images/svg/writing-button.svg"
     })
 });
