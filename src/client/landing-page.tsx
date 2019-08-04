@@ -2,7 +2,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import { Fade } from "react-reveal";
-import AboutPage from "./about";
+
 import {
     Route,
     NavLink,

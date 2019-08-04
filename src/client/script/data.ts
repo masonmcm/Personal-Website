@@ -188,129 +188,129 @@ export default [
         "id": 14,
         "thumbSrc": "./images/jpg/thumb/picture-1_thumb.jpg",
         "src": "./images/jpg/full-size/picture-1_full.jpg",
-        "title": "1",
-        "relativeUrl": "1",
+        "title": "Outside Garðabær, Iceland",
+        "relativeUrl": "Outside-Garðabær,-Iceland",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 15,
         "thumbSrc": "./images/jpg/thumb/picture-2_thumb.jpg",
         "src": "./images/jpg/full-size/picture-2_full.jpg",
-        "title": "2",
-        "relativeUrl": "2",
+        "title": "Nauthólsvík Geothermal Beach",
+        "relativeUrl": "Nauthólsvík-Geothermal-Beach",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 16,
         "thumbSrc": "./images/jpg/thumb/picture-3_thumb.jpg",
         "src": "./images/jpg/full-size/picture-3_full.jpg",
-        "title": "3",
-        "relativeUrl": "3",
+        "title": "Superkilen Park",
+        "relativeUrl": "Superkilen-Park",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 17,
         "thumbSrc": "./images/jpg/thumb/picture-4_thumb.jpg",
         "src": "./images/jpg/full-size/picture-4_full.jpg",
-        "title": "4",
-        "relativeUrl": "4",
+        "title": "Moesgaard Museum",
+        "relativeUrl": "Moesgaard-Museum",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 18,
         "thumbSrc": "./images/jpg/thumb/picture-5_thumb.jpg",
         "src": "./images/jpg/full-size/picture-5_full.jpg",
-        "title": "5",
-        "relativeUrl": "5",
+        "title": "Slowthai-at-Distortion,-Copenhagen",
+        "relativeUrl": "Slowthai-at-Distortion,-Copenhagen",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 19,
         "thumbSrc": "./images/jpg/thumb/picture-6_thumb.jpg",
         "src": "./images/jpg/full-size/picture-6_full.jpg",
-        "title": "6",
-        "relativeUrl": "6",
+        "title": "Siglunes Nauthólsvík",
+        "relativeUrl": "Siglunes-Nauthólsvík",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 20,
         "thumbSrc": "./images/jpg/thumb/picture-7_thumb.jpg",
         "src": "./images/jpg/full-size/picture-7_full.jpg",
-        "title": "7",
-        "relativeUrl": "7",
+        "title": "Store Kannikestræde 13",
+        "relativeUrl": "Store-Kannikestræde-13",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 21,
         "thumbSrc": "./images/jpg/thumb/picture-8_thumb.jpg",
         "src": "./images/jpg/full-size/picture-8_full.jpg",
-        "title": "8",
-        "relativeUrl": "8",
+        "title": "Garðabær construction site",
+        "relativeUrl": "Garðabær-Construction-Site",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 22,
         "thumbSrc": "./images/jpg/thumb/picture-9_thumb.jpg",
         "src": "./images/jpg/full-size/picture-9_full.jpg",
-        "title": "9",
-        "relativeUrl": "9",
+        "title": "Field of Lupine",
+        "relativeUrl": "Field of Lupine",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 
     {
         "id": 23,
         "thumbSrc": "./images/jpg/thumb/picture-10_thumb.jpg",
         "src": "./images/jpg/full-size/picture-10_full.jpg",
-        "title": "10",
-        "relativeUrl": "10",
+        "title": "Around 12 A.M.",
+        "relativeUrl": "Around 12 A.M.",
         "collab": "none",
         "date": 2019,
         "medium": "Film",
         "form": "Photography",
-        "size": "wide"
+        "size": "photo"
     },
 ]
