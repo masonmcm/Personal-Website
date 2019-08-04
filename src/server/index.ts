@@ -61,10 +61,43 @@ app.get("/code-1", (req, res) => {
     res.render("code-1", {
         title: "Code 1",
         header: false, 
-        imageURL: "./images/svg/writing-button.svg"
     })
 });
 
+app.get("/code-2", (req, res) => {
+    res.render("code-2", {
+        title: "Code 2",
+        header: false, 
+    })
+});
+
+app.get("/code-3", (req, res) => {
+    res.render("code-3", {
+        title: "Code 3",
+        header: false, 
+    })
+});
+
+app.get("/writing-1", (req, res) => {
+    res.render("writing-1", {
+        title: "Writing 1",
+        header: false, 
+    })
+});
+
+app.get("/writing-2", (req, res) => {
+    res.render("writing-2", {
+        title: "Writing 2",
+        header: false, 
+    })
+});
+
+app.get("/writing-3", (req, res) => {
+    res.render("writing-3", {
+        title: "Writing 3",
+        header: false, 
+    })
+});
 
 export let main = async () => {
 app.listen(1234, () => console.log("Listening on port 1234"))

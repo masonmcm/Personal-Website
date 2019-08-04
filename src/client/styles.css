@@ -54,7 +54,7 @@ a {
     flex-direction: column;
 }
 
-.code-container {
+.code-container, .writing-container {
     justify-content: flex-start;
     margin-top: 25px;
 }
@@ -223,6 +223,15 @@ li {
 
 .gallery-image {
     width: 90%;
+    cursor: pointer;
+}
+
+.gallery-image, .arrow {
+    cursor: pointer;
+}
+
+#exit-button {
+    cursor: pointer;
 }
 
 .even {
@@ -273,13 +282,14 @@ li {
 }
 
 .pop-up-image-and-caption {
-    width: 40%;
+    /* width: 40%; */
     min-width: 338px;
 }
 
 .pop-up-body {
     display: flex;
-    justify-content: space-between; 
+    width: 100%;
+    justify-content: space-around;
 }
 
 .arrow-container {
@@ -287,7 +297,6 @@ li {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    border: 1px solid 
 }
 
 #arrow-left {
@@ -303,6 +312,7 @@ li {
 
 #exit-button {
     width: 15%;
+    max-width: 60px;
 }
 
 .background-black {
@@ -320,6 +330,8 @@ li {
     min-width: 200px;
     margin-right: 15px; 
     margin-bottom: 40px;
+    width: auto;
+    height: auto;
 }
 
 .about-center-container {
@@ -434,11 +446,16 @@ h2 {
     display: flex;
 }
 
+
 .exclamation-1, .exclamation-2, .exclamation-3, .profile-text {
     text-align: center;
 }
 
 /* Writing and Code Styles */
+
+.writing-and-code-links a:visited:hover {
+    color: #0380BC;
+}
 
 .writing-and-code-links {
     margin-bottom: 75px;
@@ -448,11 +465,12 @@ h2 {
     text-align: center;
     margin-bottom: 75px;
     font-weight: 200;
-    font-style: italic;
+    font-style: normal;
 }
 
 .writing-and-code-links em {
-    font-weight: 400;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .code-snippet {
@@ -479,6 +497,10 @@ h2 {
 
 .code-text h2, p {
     text-align: center;
+}
+
+.writing-text p {
+    text-align: start;
 }
 
 /* Mobile Styles */
@@ -599,6 +621,10 @@ h2 {
 
 
     /* Mobile About Styles */ 
+
+    .profile {
+        max-width: 270px;
+    }
 
     .profile-container {
         flex-direction: column;
@@ -745,16 +771,23 @@ h2 {
         min-width: 350px;
     }
 
-    .pop-up-image-and-caption {
-        border: 1px solid
-    }
     .pop-up-body {
         display: flex;
-        justify-content: space-between;
-        border: 1px solid blue;
     }
     
+    .pop-up-narrow {
+        width: 15%;
+    }
+
+    .pop-up-regular {
+        width: 20%;
+    }
+
     .pop-up-wide {
+        width: 30%;
+    }
+
+    .pop-up-photo {
         width: 70%;
     }
 
@@ -775,6 +808,10 @@ h2 {
     }
 
     /* Tablet About Styles */
+
+    .profile {
+        max-width: 300px;
+    }
 
     .profile-container {
         flex-direction: column;
@@ -914,22 +951,30 @@ h2 {
     .gallery, .writing-and-code-links {
         width: 50%;
         min-width: 350px;
+        max-width: 515px;
+    }
+
+    .pop-up-body {
+        width: 100vw;
     }
 
     .pop-up-image-and-caption {
-        width: 40%;
         min-width: 338px;
     }
 
     .pop-up-narrow {
-        width: 30%;
+        width: 25%;
     }
 
     .pop-up-regular {
-        width: 40%;
+        width: 35%;
     }
 
     .pop-up-wide {
+        width: 40%;
+    }
+
+    .pop-up-photo {
         width: 50%;
     }
 
@@ -954,7 +999,6 @@ h2 {
     }
 
     .profile {
-        width: 100%;
         min-width: 200px;
         margin-right: 15px; 
         margin-bottom: 40px;
@@ -963,6 +1007,7 @@ h2 {
     .profile-text-container {
         display: flex;
         flex-direction: column;
+        max-width: 380px;
         justify-content: space-between;
     }
 

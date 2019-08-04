@@ -21,7 +21,7 @@ class AboutPage extends React.Component {
             <div className="about-center-container">
             <div className="centered-container">
             <div className="profile-container">
-            <Fade left><img className="profile" src="images/jpg/steve-photo.jpg" alt="profile"></img></Fade>
+            <Fade left><img className="profile" src="images/jpg/profile-2.jpg" alt="profile"></img></Fade>
                     <div className="profile-text-container">
                         <Fade right><em><h1 className="exclamation-1">Hi!</h1></em></Fade>
                         <Fade right delay={500}><em><h1 className="exclamation-2">Hey!</h1></em></Fade>
@@ -40,8 +40,8 @@ class AboutPage extends React.Component {
                <Fade right><p>When I was in high school, Calculus BC caused me so much grief that I intentionally left over 3/4 
                     of the AP Exam blank out of spite, instead filling up the space intended for FRQs with sentimental 
                     letters about motivation and life-purpose for the graders. I got a 1 out of 5 and silently vowed, “Never again.”</p>
-                    <p>I registered for my first semester of classNamees as a declared Studio Art major, opting a smorgasbord of 
-                    humanities classNamees to assuage my vitriol towards STEM. At my mother’s urging, I begrudgingly dropped “Contemporary English” 
+                    <p>I registered for my first semester of class as a declared Studio Art major, opting a smorgasbord of 
+                    humanities classes to assuage my vitriol towards STEM. At my mother’s urging, I begrudgingly dropped “Contemporary English” 
                     for ”Introduction to Programming”. <em>The rest of my college experience is history, except for that it was computer science.</em></p></Fade>
             </div>
             <Fade left><div className="image-container">
@@ -69,9 +69,9 @@ class AboutPage extends React.Component {
                 <p>Gabriel Lovejoy taught me studio art for in high school and instilled in me a deep appreciation for art history and conceptual integrity. 
                     Kris Jordan was my first computer science professor and taught me that STEM need not be intimidating.</p>
                 <p><em>Inspired by my mentors, I’ve made teaching an integral aspect of my education.</em></p>
-                <p>I was an undergraduate teaching assistant for Professor Jordan’s “Introduction to Programming” className for five semesters, helping students 
+                <p>I was an undergraduate teaching assistant for Professor Jordan’s “Introduction to Programming” course for five semesters, helping students 
                     in office hours and teaching review sessions of up to a hundred students. As a TA, I’ve worked with countless humanities students who fell in love with computer science, 
-                    just like me. I’m currently a UTA for a className intended for CS majors: "Computer Organization" with Professor Singh. For two semesters I volunteered in Chapel Hill public 
+                    just like me. I’m currently a UTA for a course intended for CS majors: "Computer Organization" with Professor Singh. For two semesters I volunteered in Chapel Hill public 
                     middle schools teaching art history in after-school care as a member of the club Art&Life. </p></Fade>
             </div>
             <Fade left><div className="image-container">
@@ -131,11 +131,10 @@ class AboutPage extends React.Component {
                 </div>
         </div></Fade>
         <Fade right><img className="page-break" src="images/svg/page-break.svg"></img></Fade>
-        <div className="about-links-container"> 
+        {/* <div className="about-links-container"> 
            <Fade bottom><h2>Resume</h2></Fade>
-           <Fade bottom delay={500}><h2>Transcript</h2></Fade>
-           <Fade bottom delay={1000}><h2>LinkedIn</h2></Fade>
-        </div> 
+           <Fade bottom><h2>LinkedIn</h2></Fade>
+        </div>  */}
         </div>
         </div>
         </div>

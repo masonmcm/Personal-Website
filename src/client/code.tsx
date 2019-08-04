@@ -9,9 +9,9 @@ let main = () => {
 };
 
 const codePage = <div className="code-content"><Fade bottom delay={100}><div className="writing-and-code-links">
-                    <a href="code-1"><h2><em>Insertion Sort</em> in Scheme</h2></a>
-                    <h2><em>iOS Application</em> in Swift</h2>
-                    <h2><em>Personal Website</em> in TypeScript</h2>
+                    <a href="code-1"><h2><em>Racket Sort</em> in Racket</h2></a>
+                    <a href="code-2"><h2><em>Functional Medicine App</em> in Swift</h2></a>
+                    <a href="code-3"><h2><em>Personal Website</em> in TypeScript</h2></a>
                 </div></Fade></div>;
 
 
