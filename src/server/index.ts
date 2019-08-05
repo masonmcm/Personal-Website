@@ -100,8 +100,9 @@ app.get("/writing-3", (req, res) => {
 });
 
 export let main = async () => {
-app.listen(1234, () => console.log("Listening on port 1234"))
-    .on('error', (e) => console.error(e));
+// app.listen(1234, () => console.log("Listening on port 1234"))
+//     .on('error', (e) => console.error(e));
+    app.listen(1234, '18.188.205.203');
 };
 
 main();
