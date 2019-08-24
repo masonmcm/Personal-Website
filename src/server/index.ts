@@ -100,6 +100,7 @@ app.get("/writing-3", (req, res) => {
 });
 
 export let main = async () => {
+    const PORT = process.env.NODE_ENV === "production" ? 80 : 1234;
     app.listen(process.env.PORT, () => console.log(`Listening on ${process.env.PORT}`))
         .on("error", (e) => console.error(e));
 };
