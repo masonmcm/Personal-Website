@@ -99,9 +99,11 @@ app.get("/writing-3", (req, res) => {
     })
 });
 
-export let main = async () => {
+export let main = async () => {	
+    console.log(process.env.NODE_ENV);
     const PORT = process.env.NODE_ENV === "production" ? 80 : 1234;
-    app.listen(process.env.PORT, () => console.log(`Listening on ${process.env.PORT}`))
+    console.log(process.env.NODE_ENV);
+    app.listen(PORT, () => console.log(`Listening on ${PORT}`))
         .on("error", (e) => console.error(e));
 };
 
