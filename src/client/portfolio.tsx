@@ -105,6 +105,10 @@ type ThumbnailProps = {
     onSelect?: (display: Display, showPopUp: boolean) => void,
 }
 
+type ThumbnailState = {
+    hovering: boolean,
+}
+
 
 class Gallery extends React.Component<GalleryProps, GalleryState> {
     constructor(props) {
@@ -277,16 +281,29 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
     }
 }
 
-class Thumbnail extends React.Component<ThumbnailProps> {
+class Thumbnail extends React.Component<ThumbnailProps, ThumbnailState> {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            hovering: false
+        };
+    }
+
     render() {
         return <Fade bottom delay={100}><img id={this.props.id} className={"gallery-image " + this.props.display.form + "-thumbnail" + ((this.props.index % 2 === 0)? " even" : " odd")} 
-        onMouseDown={() => this.handleMouseEvent(true)} src={this.props.display.thumbSrc} alt={this.props.display.title}></img></Fade>;
+        onMouseDown={() => this.handleMouseEvent(true)} onMouseEnter={()=> this.setState({hovering: true})} onMouseLeave={()=> this.setState({hovering: false})}
+        src={this.handleHover()} alt={this.props.display.title}></img></Fade>;
     }
 
     handleMouseEvent(showPopUp: boolean) {
         if(this.props.onSelect !== undefined){
             this.props.onSelect(this.props.display, showPopUp);
         }
+    }
+
+    handleHover(): string {
+        return (this.state.hovering === true) ? "./images/svg/view-button.svg" : this.props.display.thumbSrc;
     }
 }
 
