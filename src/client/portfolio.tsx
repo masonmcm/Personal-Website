@@ -9,7 +9,7 @@ import Fade from 'react-reveal/Fade';
 import Header from './header';
 import { CSSTransition } from 'react-transition-group';
 import ScrollToTop from "react-scroll-up";
-import { useSwipeable, Swipeable } from 'react-swipeable'
+// import { useSwipeable, Swipeable } from 'react-swipeable'
 import './styles.css';
 
 let main = () => {
@@ -229,8 +229,8 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
     render() {
         return <div className="pop-up">
             <Fade delay={500} when={this.props.showNewImage}>
-                <Swipeable onSwipedLeft={() => this.showNewImage(this.props.display, "left")}
-                                onSwipedRight={() => this.showNewImage(this.props.display, "right")}>
+                {/* <Swipeable onSwipedLeft={() => this.showNewImage(this.props.display, "left")}
+                                onSwipedRight={() => this.showNewImage(this.props.display, "right")}> */}
                     <div className="pop-up-body" onLoad={() => this.setState({transitioning: false})}>
                         <div className="arrow-container"><img className={"arrow" + ((this.props.display.id === gallery[0].props.display.id)? " hidden" : "")} id="arrow-left" src="images/svg/gallery-arrow-2.svg" 
                         onMouseDown={() => this.showNewImage(this.props.display, "left") }></img></div>
@@ -247,7 +247,7 @@ class PopUp extends React.Component<PopUpProps, PopUpState> {
                         </div>
                         <div className="arrow-container"><img className={"arrow" + ((this.props.display.id === gallery[gallery.length - 1].props.display.id)? " hidden" : "")} id="arrow-right" src="images/svg/gallery-arrow-2.svg" onMouseDown={() => this.showNewImage(this.props.display, "right")}></img></div>
                     </div>
-                </Swipeable>
+                {/* </Swipeable> */}
             </Fade>
         </div>;
     }
