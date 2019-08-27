@@ -4,7 +4,7 @@
   "description": "A personal website and portfolio for and by Mason Mathew written in TypeScript and Angular. Backed by a content management system that utilizes Express.",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server/index.ts",
+    "start": "ts-node server/index.ts",
     "dev": "parcel client/landing-page.html",
     "build": "parcel build client/{*.css,*.tsx,images,documents,script}",
     "play": "parcel playground/react-router/index.html",
