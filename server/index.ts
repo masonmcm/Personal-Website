@@ -99,7 +99,11 @@ app.get("/writing-3", (req, res) => {
     })
 });
 
+<<<<<<< HEAD:server/index.ts
 export let main = async () => {	
+=======
+export let main = async () => {
+>>>>>>> 5e83e361983c0044ec8b42af3754eff0cd6e3b39:src/server/index.ts
     console.log(process.env.NODE_ENV);
     const PORT = process.env.NODE_ENV === "production" ? 80 : 1234;
     console.log(process.env.NODE_ENV);
