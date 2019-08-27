@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/server/index.ts",
-    "dev": "parcel src/client/landing-page.html",
-    "build": "parcel build src/client/{*.css,*.tsx,images,documents,script}",
-    "play": "parcel src/playground/react-router/index.html",
+    "dev": "parcel client/landing-page.html",
+    "build": "parcel build client/{*.css,*.tsx,images,documents,script}",
+    "play": "parcel playground/react-router/index.html",
     "prod": "git reset --hard && git pull origin server-side && npm run build && sudo NODE_ENV=production npm run start"
   },
   "repository": {
