@@ -8,7 +8,7 @@ app.use(express.static("dist/"));
 app.use(express.urlencoded({extended: true}));
 
 app.set("view engine", "hbs");
-app.set("views", "src/server/views");
+app.set("views", "server/views");
 
 app.engine("hbs", exphbs({
     defaultLayout: "default",
