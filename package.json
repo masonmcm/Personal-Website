@@ -43,7 +43,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.1.2",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.21",
     "postcss-modules": "^1.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
